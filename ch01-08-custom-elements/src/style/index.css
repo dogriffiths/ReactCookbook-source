@@ -1,0 +1,24 @@
+.Converter {
+    background: repeating-linear-gradient(
+        45deg, #e3f2bb, #e3f2bb 2px,
+        #d3e5bd 2px, #d3e5bd 4px);
+    border-color: #406836;
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 8px;
+    display: inline-block;
+    padding-right: 16px;
+    padding-left: 16px;
+    font-family: Georgia, serif;
+    text-align: right;
+}
+
+.Converter-amount {
+    background: #fdffe3;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: -16px;
+    margin-right: -16px;
+    padding-right: 16px;
+    padding-left: 16px;
+}

@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/babel-polyfill/dist/polyfill.min.js"></script>
+        <script src="https://unpkg.com/@webcomponents/webcomponentsjs">
+        </script>
+        <!-- Replace this with the address of your custom element -->
+        <script type="text/javascript" src="http://localhost:8080/bundle.js"></script>
+    </head>
+    <body>
+        <h1>Custom Web Element</h1>
+        <div style="float: right; clear: both">
+            <!-- This tag will insert the Preact app -->
+            <x-converter currency="jpy"/>
+        </div>
+        <p>This page contains an example custom element called
+            <code>&lt;x-converter/&gt;</code>,
+            which is being served from a different location</p>
+    </body>
+</html>
