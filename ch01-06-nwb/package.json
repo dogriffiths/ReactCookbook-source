@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "cypress": "^4.5.0",
-    "nwb": "0.24.x"
+    "nwb": "0.25.x"
   },
   "author": "",
   "license": "MIT",
