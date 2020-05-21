@@ -39,6 +39,6 @@
     "@storybook/addons": "^5.3.18",
     "@storybook/preset-create-react-app": "^2.1.2",
     "@storybook/react": "^5.3.18",
-    "cypress": "^4.5.0"
+    "cypress": "^4.6.0"
   }
 }
