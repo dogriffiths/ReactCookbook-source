@@ -37,7 +37,7 @@
     "@storybook/addon-actions": "^5.3.18",
     "@storybook/addon-links": "^5.3.18",
     "@storybook/addons": "^5.3.18",
-    "@storybook/preset-create-react-app": "^2.1.2",
+    "@storybook/preset-create-react-app": "^3.0.0",
     "@storybook/react": "^5.3.18",
     "cypress": "^4.6.0"
   }

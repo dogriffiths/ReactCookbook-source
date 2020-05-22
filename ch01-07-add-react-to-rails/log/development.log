@@ -1,13 +1,13 @@
-Started GET "/example/index.html" for 127.0.0.1 at 2020-05-21 08:06:49 +0100
-  [1m[35m (3.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/example/index.html" for 127.0.0.1 at 2020-05-22 08:28:36 +0100
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
 Processing by ExampleController#index as HTML
   Rendering example/index.html.erb within layouts/application
 [Webpacker] Compiling...
 [Webpacker] Compiled all packs in /Users/davidg/Desktop/ReactCookbook/code/chapter1/rails-cypress/app/public/packs
 [Webpacker] Hash: ae849b4a2cc5f9fd3e60
 Version: webpack 4.43.0
-Time: 18603ms
-Built at: 05/21/2020 8:07:14 AM
+Time: 22988ms
+Built at: 05/22/2020 8:29:06 AM
                                      Asset        Size       Chunks                         Chunk Names
     js/application-9afcbb5693aa87623e69.js     124 KiB  application  [emitted] [immutable]  application
 js/application-9afcbb5693aa87623e69.js.map     139 KiB  application  [emitted] [dev]        application
@@ -27,8 +27,18 @@ Entrypoint hello_react = js/hello_react-52b16e92270018fe2c5a.js js/hello_react-5
 [./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
     + 18 hidden modules
 
-  Rendered example/index.html.erb within layouts/application (Duration: 24430.4ms | Allocations: 5821)
+  Rendered example/index.html.erb within layouts/application (Duration: 29803.8ms | Allocations: 4089)
 [Webpacker] Everything's up-to-date. Nothing to do
-Completed 200 OK in 24589ms (Views: 24561.8ms | ActiveRecord: 0.0ms | Allocations: 25483)
+Completed 200 OK in 29939ms (Views: 29913.9ms | ActiveRecord: 0.0ms | Allocations: 23747)
+
+
+Started GET "/example/index.html" for 127.0.0.1 at 2020-05-22 08:51:01 +0100
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ExampleController#index as HTML
+  Rendering example/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered example/index.html.erb within layouts/application (Duration: 16.9ms | Allocations: 2452)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 71ms (Views: 60.5ms | ActiveRecord: 0.0ms | Allocations: 9612)
 
 
