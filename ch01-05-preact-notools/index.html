@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>No Tools!</title>
+        <script src="https://unpkg.com/preact?umd"></script>
+    </head>
+    <body>
+        <h1>No Tools Preact App!</h1>
+        <div id="root"></div>
+        <script>
+         var h = window.preact.h;
+         var render = window.preact.render;
+
+         var mount = document.getElementById('root');
+         
+         render(
+             h('button',
+               {
+                   onClick: function() {
+                       render(h('div', null, 'Hello'), mount);
+                   }
+               },
+               'Click!'),
+             mount
+         );
+        </script>
+    </body>
+</html>
+
