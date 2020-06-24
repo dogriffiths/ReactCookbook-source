@@ -16,7 +16,7 @@
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
-    "cypress": "^4.8.0",
+    "cypress": "^4.9.0",
     "nwb": "0.25.x"
   },
   "author": "",

@@ -1,13 +1,13 @@
-Started GET "/example/index.html" for 127.0.0.1 at 2020-06-16 08:03:59 +0100
-  [1m[35m (5.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/example/index.html" for 127.0.0.1 at 2020-06-24 12:30:57 +0100
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
 Processing by ExampleController#index as HTML
   Rendering example/index.html.erb within layouts/application
 [Webpacker] Compiling...
 [Webpacker] Compiled all packs in /Users/davidg/Desktop/ReactCookbook/code/chapter1/rails-cypress/app/public/packs
 [Webpacker] Hash: ae849b4a2cc5f9fd3e60
 Version: webpack 4.43.0
-Time: 17488ms
-Built at: 06/16/2020 8:04:23 AM
+Time: 24887ms
+Built at: 06/24/2020 12:31:30 PM
                                      Asset        Size       Chunks                         Chunk Names
     js/application-9afcbb5693aa87623e69.js     124 KiB  application  [emitted] [immutable]  application
 js/application-9afcbb5693aa87623e69.js.map     139 KiB  application  [emitted] [dev]        application
@@ -27,8 +27,17 @@ Entrypoint hello_react = js/hello_react-52b16e92270018fe2c5a.js js/hello_react-5
 [./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
     + 18 hidden modules
 
-  Rendered example/index.html.erb within layouts/application (Duration: 23173.9ms | Allocations: 4080)
+  Rendered example/index.html.erb within layouts/application (Duration: 32894.0ms | Allocations: 3891)
 [Webpacker] Everything's up-to-date. Nothing to do
-Completed 200 OK in 23361ms (Views: 23345.1ms | ActiveRecord: 0.0ms | Allocations: 23766)
+Completed 200 OK in 33140ms (Views: 33071.5ms | ActiveRecord: 0.0ms | Allocations: 23581)
+
+
+Started GET "/example/index.html" for 127.0.0.1 at 2020-06-24 12:31:50 +0100
+Processing by ExampleController#index as HTML
+  Rendering example/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered example/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 2221)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 16.8ms | ActiveRecord: 0.0ms | Allocations: 5951)
 
 
