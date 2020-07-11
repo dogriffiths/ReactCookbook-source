@@ -2644,9 +2644,9 @@ ecc-jsbn@~0.1.1:
     safer-buffer "^2.1.0"
 
 electron-to-chromium@^1.3.413, electron-to-chromium@^1.3.488:
-  version "1.3.495"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.495.tgz#7c8284119bcd2c27e5968f2054296e57318dcc21"
-  integrity sha512-cIPX+4Y3RH/+SoqYd168Rx//CnjsZSdF3XTUhwMf3dwYuTfvWIgmmy6s1ipptGaOA+scH2Vj57Mc9fqp/ho22Q==
+  version "1.3.496"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.496.tgz#3f43d32930481d82ad3663d79658e7c59a58af0b"
+  integrity sha512-TXY4mwoyowwi4Lsrq9vcTUYBThyc1b2hXaTZI13p8/FRhY2CTaq5lK+DVjhYkKiTLsKt569Xes+0J5JsVXFurQ==
 
 elegant-spinner@^1.0.1:
   version "1.0.1"
