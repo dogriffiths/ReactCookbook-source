@@ -1,13 +1,13 @@
-Started GET "/example/index.html" for 127.0.0.1 at 2020-07-11 08:22:51 +0100
-  [1m[35m (4.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/example/index.html" for 127.0.0.1 at 2020-07-12 17:33:05 +0100
+  [1m[35m (6.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
 Processing by ExampleController#index as HTML
   Rendering example/index.html.erb within layouts/application
 [Webpacker] Compiling...
 [Webpacker] Compiled all packs in /Users/davidg/Desktop/ReactCookbook/code/chapter1/rails-cypress/app/public/packs
 [Webpacker] Hash: ae849b4a2cc5f9fd3e60
 Version: webpack 4.43.0
-Time: 26215ms
-Built at: 07/11/2020 8:23:25 AM
+Time: 26918ms
+Built at: 07/12/2020 5:33:40 PM
                                      Asset        Size       Chunks                         Chunk Names
     js/application-9afcbb5693aa87623e69.js     124 KiB  application  [emitted] [immutable]  application
 js/application-9afcbb5693aa87623e69.js.map     139 KiB  application  [emitted] [dev]        application
@@ -27,17 +27,17 @@ Entrypoint hello_react = js/hello_react-52b16e92270018fe2c5a.js js/hello_react-5
 [./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
     + 18 hidden modules
 
-  Rendered example/index.html.erb within layouts/application (Duration: 33342.9ms | Allocations: 3890)
+  Rendered example/index.html.erb within layouts/application (Duration: 34918.9ms | Allocations: 3895)
 [Webpacker] Everything's up-to-date. Nothing to do
-Completed 200 OK in 33531ms (Views: 33483.4ms | ActiveRecord: 0.0ms | Allocations: 23579)
+Completed 200 OK in 35081ms (Views: 35059.7ms | ActiveRecord: 0.0ms | Allocations: 23744)
 
 
-Started GET "/example/index.html" for 127.0.0.1 at 2020-07-11 08:23:46 +0100
+Started GET "/example/index.html" for 127.0.0.1 at 2020-07-12 17:33:59 +0100
 Processing by ExampleController#index as HTML
   Rendering example/index.html.erb within layouts/application
 [Webpacker] Everything's up-to-date. Nothing to do
-  Rendered example/index.html.erb within layouts/application (Duration: 15.1ms | Allocations: 2223)
+  Rendered example/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 2221)
 [Webpacker] Everything's up-to-date. Nothing to do
-Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.0ms | Allocations: 5955)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.0ms | Allocations: 5950)
 
 
