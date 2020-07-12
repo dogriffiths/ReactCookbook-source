@@ -15,9 +15,7 @@ export default () => {
                     <Route path='/people/:id'>
                         <Person/>
                     </Route>
-                    <Route>
-                        <PeopleList/>
-                    </Route>
+                    <PeopleList/>
                 </Switch>
                 :
                 <div style={{display: 'flex'}}>

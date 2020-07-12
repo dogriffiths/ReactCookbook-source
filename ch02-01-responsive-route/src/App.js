@@ -9,9 +9,7 @@ function App() {
             <Route path='/people'>
                 <PeopleContainer/>
             </Route>
-            <Route>
-                <Link to='/people'>People</Link>
-            </Route>
+            <Link to='/people'>People</Link>
         </Switch>
     </BrowserRouter>
   );
