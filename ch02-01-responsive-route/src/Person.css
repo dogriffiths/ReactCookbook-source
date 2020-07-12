@@ -1,0 +1,29 @@
+.Person {
+    margin: 0;
+    padding: 0 0 0 12px;
+    background-color: rgb(16, 14, 23);
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    width: 100%;
+    color: white;
+    min-height: 100vh;
+}
+
+.Person label {
+    clear: both;
+    width: 100px;
+    text-align: right;
+    float: left;
+    padding-right: 16px;
+    color: silver;
+}
+
+.Person-id, .Person-address, .Person-department {
+    margin-bottom: 16px;
+}
+
+.Person-address {
+    white-space: pre;
+    display: grid;
+}

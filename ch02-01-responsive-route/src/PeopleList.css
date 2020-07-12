@@ -1,0 +1,23 @@
+.PeopleList ul {
+    margin: 0;
+    padding: 0;
+}
+
+.PeopleList li {
+    list-style-type: none;
+}
+
+.PeopleList a {
+    border-bottom-color: #c0c0c0;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    display: block;
+    padding: 16px;
+    white-space: nowrap;
+}
+
+.PeopleList .currentPerson {
+    background-color: rgb(16, 14, 23);
+    color: white;
+    font-weight: bold;
+}
