@@ -1,25 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter, Link, Route, Switch} from "react-router-dom";
+import About from "./About";
+import OldAbout from "./OldAbout";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+        <BrowserRouter>
+            <ul role='navigation'>
+                <li><Link to='/oldabout'>Old about</Link></li>
+                <li><Link to='/about'>About</Link></li>
+                <li><Link to='/about/people'>About (people)</Link></li>
+                <li><Link to='/about/offices'>About (offices)</Link></li>
+            </ul>
+            <Switch>
+                <Route path="/oldabout">
+                    <OldAbout/>
+                </Route>
+                <Route path="/about/:tabId?">
+                    <About/>
+                </Route>
+                <p>Choose an option</p>
+            </Switch>
+        </BrowserRouter>
+    </main>
   );
 }
 
