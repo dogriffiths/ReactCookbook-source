@@ -1,0 +1,41 @@
+.About {
+    margin: 32px;
+}
+
+.About-tabs {
+    display: flex;
+}
+
+.About-tab {
+    color: black;
+    width: 100px;
+    cursor: pointer;
+    padding: 8px;
+    background-color: #eee;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #c0c0c0;
+    border-bottom-style: none;
+}
+
+.About-tab a {
+    text-decoration: none;
+}
+
+.About-tab.active {
+    background-color: white;
+}
+
+.About dd {
+    margin-bottom: 32px;
+}
+
+.About-tabContent {
+    position: relative;
+}
+
+.People, .Offices {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
