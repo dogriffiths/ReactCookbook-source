@@ -4,8 +4,8 @@ import "./About.css";
 import People from "./People";
 import Offices from "./Offices";
 
-export default () => {
-    return <div className='About'>
+export default () =>
+    <div className='About'>
         <div className='About-tabs'>
             <NavLink to="/about/people"
                      className="About-tab"
@@ -28,4 +28,3 @@ export default () => {
             <Redirect to='/about/people'/>
         </Switch>
     </div>;
-}
