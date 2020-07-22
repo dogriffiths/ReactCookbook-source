@@ -8,7 +8,7 @@ import "./About.css";
 import "./fade.css";
 
 export default () => {
-    let location = useLocation();
+    const location = useLocation();
 
     return <div className='About'>
         <div className='About-tabs'>

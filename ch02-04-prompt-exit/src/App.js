@@ -7,7 +7,7 @@ import Alert from './Alert';
 function App() {
     const [confirmOpen, setConfirmOpen] = useState(false);
     const [confirmMessage, setConfirmMessage] = useState();
-    const [confirmCallback, setConfirmCallback] = useState("blah");
+    const [confirmCallback, setConfirmCallback] = useState();
 
     return (
         <div className="App">

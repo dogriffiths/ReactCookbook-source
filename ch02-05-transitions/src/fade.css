@@ -7,7 +7,6 @@
 }
 .fade-exit {
     opacity: 1;
-    z-index: 0;
 }
 .fade-exit-active {
     opacity: 0;

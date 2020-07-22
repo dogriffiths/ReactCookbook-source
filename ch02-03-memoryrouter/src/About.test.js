@@ -6,13 +6,30 @@ import React from "react";
 import About from './About';
 
 describe('About component', () => {
-    it('should show people by default', () => {
-        const { getByText } = render (<MemoryRouter initialEntries={[
+    it.skip('this will break because there is no router', () => {
+        const {getByText} = render(<About/>);
+
+        expect(getByText('Kip Russel')).toBeInTheDocument();
+    });
+    it('should show people', () => {
+        const {getByText} = render(<MemoryRouter><About/></MemoryRouter>);
+
+        expect(getByText('Kip Russel')).toBeInTheDocument();
+    });
+    it('should show offices if in route', () => {
+        const {getByText} = render(<MemoryRouter initialEntries={[
+            {pathname: '/about/offices'},
+        ]}>
+            <About/>
+        </MemoryRouter>);
+
+        expect(getByText('South Dakota')).toBeInTheDocument();
+    });
+    it('should be able to click to offices', () => {
+        const {getByText} = render(<MemoryRouter initialEntries={[
             {pathname: '/about'},
         ]}>
-            <Route path='/about/:tabId?'>
-                <About/>
-            </Route>
+            <About/>
         </MemoryRouter>);
 
         expect(getByText('Kip Russel')).toBeInTheDocument();
