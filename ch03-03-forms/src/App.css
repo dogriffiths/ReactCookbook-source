@@ -1,0 +1,13 @@
+.App {
+    margin: 32px;
+}
+
+.App select {
+    margin: 8px;
+}
+
+main {
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+}

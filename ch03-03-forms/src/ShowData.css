@@ -1,0 +1,20 @@
+.ShowData {
+    color: white;
+    background-color: black;
+    padding: 32px;
+    width: 50vw;
+    max-width: 50vw;
+    min-width: 50vw;
+}
+
+.ShowData dd {
+    white-space: pre;
+    font-family: monospace;
+    color: #00ff00;
+    font-size: 140%;
+    font-weight: 500;
+}
+
+.ShowData dd {
+    margin: 16px;
+}
