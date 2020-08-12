@@ -3,7 +3,7 @@ import moment from "moment";
 
 export default (formatOrInterval) => {
     const format = (typeof formatOrInterval === 'string')
-        ? formatOrInterval : 'h:mm:ss.SSS';
+        ? formatOrInterval : 'YYYY-MM-DDTHH:mm:ss.SSS';
     const interval = (typeof formatOrInterval === 'number')
         ? formatOrInterval : 500;
     const [response, setResponse] = useState(
