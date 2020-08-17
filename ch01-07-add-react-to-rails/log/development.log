@@ -1,13 +1,13 @@
-Started GET "/example/index.html" for 127.0.0.1 at 2020-08-13 19:00:12 +0100
-  [1m[35m (15.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/example/index.html" for 127.0.0.1 at 2020-08-16 11:59:28 +0100
+  [1m[35m (9.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
 Processing by ExampleController#index as HTML
   Rendering example/index.html.erb within layouts/application
 [Webpacker] Compiling...
 [Webpacker] Compiled all packs in /Users/davidg/Desktop/ReactCookbook/code/chapter1/rails-cypress/app/public/packs
 [Webpacker] Hash: ae849b4a2cc5f9fd3e60
 Version: webpack 4.44.1
-Time: 20625ms
-Built at: 08/13/2020 7:00:39 PM
+Time: 23166ms
+Built at: 08/16/2020 11:59:58 AM
                                      Asset        Size       Chunks                         Chunk Names
     js/application-9afcbb5693aa87623e69.js     124 KiB  application  [emitted] [immutable]  application
 js/application-9afcbb5693aa87623e69.js.map     139 KiB  application  [emitted] [dev]        application
@@ -27,18 +27,17 @@ Entrypoint hello_react = js/hello_react-52b16e92270018fe2c5a.js js/hello_react-5
 [./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
     + 18 hidden modules
 
-  Rendered example/index.html.erb within layouts/application (Duration: 26960.7ms | Allocations: 3873)
+  Rendered example/index.html.erb within layouts/application (Duration: 29942.9ms | Allocations: 3880)
 [Webpacker] Everything's up-to-date. Nothing to do
-Completed 200 OK in 27190ms (Views: 27157.9ms | ActiveRecord: 0.0ms | Allocations: 23557)
+Completed 200 OK in 30166ms (Views: 30131.4ms | ActiveRecord: 0.0ms | Allocations: 23564)
 
 
-Started GET "/example/index.html" for 127.0.0.1 at 2020-08-13 19:53:16 +0100
-  [1m[35m (5.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/example/index.html" for 127.0.0.1 at 2020-08-16 12:00:20 +0100
 Processing by ExampleController#index as HTML
   Rendering example/index.html.erb within layouts/application
 [Webpacker] Everything's up-to-date. Nothing to do
-  Rendered example/index.html.erb within layouts/application (Duration: 26.2ms | Allocations: 2457)
+  Rendered example/index.html.erb within layouts/application (Duration: 9.3ms | Allocations: 2223)
 [Webpacker] Everything's up-to-date. Nothing to do
-Completed 200 OK in 93ms (Views: 74.1ms | ActiveRecord: 0.0ms | Allocations: 9641)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.0ms | Allocations: 5961)
 
 
