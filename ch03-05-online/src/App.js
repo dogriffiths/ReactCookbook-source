@@ -7,13 +7,13 @@ function App() {
     
     return <div className="App">
         <h1>Network Checker</h1>
-        <p>
+        <span>
             You are now....
             {online
                 ? <div className='App-indicator-online'>ONLINE</div>
                 : <div className='App-indicator-offline'>OFFLINE</div>
             }
-        </p>
+        </span>
     </div>;
 }
 
