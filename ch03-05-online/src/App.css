@@ -1,0 +1,15 @@
+.App {
+    margin: 32px;
+}
+
+.App-indicator-online, .App-indicator-offline {
+    display: inline-block;
+}
+
+.App-indicator-online {
+    color: green;
+}
+
+.App-indicator-offline {
+    color: red;
+}
