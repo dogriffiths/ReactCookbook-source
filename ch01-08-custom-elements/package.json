@@ -17,7 +17,7 @@
     ]
   },
   "devDependencies": {
-    "cypress": "^5.0.0",
+    "cypress": "^5.1.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-preact-pure": "^2.0.0",
     "eslint": "^6.0.1",
@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "preact": "^10.3.2",
-    "preact-custom-element": "^4.1.0",
+    "preact-custom-element": "^4.2.0",
     "preact-render-to-string": "^5.1.4",
     "preact-router": "^3.2.1"
   },

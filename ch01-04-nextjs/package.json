@@ -8,11 +8,11 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "9.5.2",
+    "next": "9.5.3",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   },
   "devDependencies": {
-    "cypress": "^5.0.0"
+    "cypress": "^5.1.0"
   }
 }
