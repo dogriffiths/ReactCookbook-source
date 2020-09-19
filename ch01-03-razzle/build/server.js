@@ -23,7 +23,7 @@ module.exports =
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "72fd498f4a6a5909195c";
+/******/ 	var hotCurrentHash = "401d87ccc23e035b2b8c";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -1031,7 +1031,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Home */ "./src/Home.js");
 /* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./App.css */ "./src/App.css");
 /* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_App_css__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/Users/davidg/Desktop/ReactCookbook/code/chapter1/razzle-cypress/app/src/App.js";
+var _jsxFileName = "/Users/davidg/Desktop/code/chapter1/razzle-cypress/app/src/App.js";
 
 
 
@@ -1103,7 +1103,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/davidg/Desktop/ReactCookbook/code/chapter1/razzle-cypress/app/src/Home.js";
+var _jsxFileName = "/Users/davidg/Desktop/code/chapter1/razzle-cypress/app/src/Home.js";
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default()(this, result); }; }
 
@@ -1302,7 +1302,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var express__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react_dom_server__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-dom/server */ "react-dom/server");
 /* harmony import */ var react_dom_server__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_dom_server__WEBPACK_IMPORTED_MODULE_4__);
-var _jsxFileName = "/Users/davidg/Desktop/ReactCookbook/code/chapter1/razzle-cypress/app/src/server.js";
+var _jsxFileName = "/Users/davidg/Desktop/code/chapter1/razzle-cypress/app/src/server.js";
 
 
 
@@ -1312,7 +1312,7 @@ var _jsxFileName = "/Users/davidg/Desktop/ReactCookbook/code/chapter1/razzle-cyp
 var assets = __webpack_require__(/*! ./build/assets.json */ "./build/assets.json");
 
 var server = express__WEBPACK_IMPORTED_MODULE_3___default()();
-server.disable('x-powered-by').use(express__WEBPACK_IMPORTED_MODULE_3___default.a["static"]("/Users/davidg/Desktop/ReactCookbook/code/chapter1/razzle-cypress/app/public")).get('/*', function (req, res) {
+server.disable('x-powered-by').use(express__WEBPACK_IMPORTED_MODULE_3___default.a["static"]("/Users/davidg/Desktop/code/chapter1/razzle-cypress/app/public")).get('/*', function (req, res) {
   var context = {};
   var markup = Object(react_dom_server__WEBPACK_IMPORTED_MODULE_4__["renderToString"])( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["StaticRouter"], {
     context: context,
@@ -1349,7 +1349,7 @@ server.disable('x-powered-by').use(express__WEBPACK_IMPORTED_MODULE_3___default.
 
 __webpack_require__(/*! razzle-dev-utils/prettyNodeErrors */"razzle-dev-utils/prettyNodeErrors");
 __webpack_require__(/*! webpack/hot/poll?300 */"./node_modules/webpack/hot/poll.js?300");
-module.exports = __webpack_require__(/*! /Users/davidg/Desktop/ReactCookbook/code/chapter1/razzle-cypress/app/src */"./src/index.js");
+module.exports = __webpack_require__(/*! /Users/davidg/Desktop/code/chapter1/razzle-cypress/app/src */"./src/index.js");
 
 
 /***/ }),

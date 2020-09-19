@@ -20,12 +20,16 @@ export default () => {
             }
         </div>
         <div className='Puzzle-controls'>
-            <button className='Puzzle-shuffle' onClick={() => dispatch({type: 'shuffle'})}>Shuffle</button>
-            <button className='Puzzle-reset' onClick={() => dispatch({type: 'reset'})}>Reset</button>
+            <button className='Puzzle-shuffle'
+                    onClick={() => dispatch({type: 'shuffle'})}>Shuffle</button>
+            <button className='Puzzle-reset'
+                    onClick={() => dispatch({type: 'reset'})}>Reset</button>
         </div>
         <div className='Puzzle-controls'>
-            <button className='Puzzle-undo' onClick={() => dispatch({type: 'undo'})}>Undo</button>
-            <button className='Puzzle-redo' onClick={() => dispatch({type: 'redo'})}>Redo</button>
+            <button className='Puzzle-undo'
+                    onClick={() => dispatch({type: 'undo'})}>Undo</button>
+            <button className='Puzzle-redo'
+                    onClick={() => dispatch({type: 'redo'})}>Redo</button>
         </div>
         {
             state.complete &&

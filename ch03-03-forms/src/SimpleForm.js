@@ -26,14 +26,19 @@ export default ({children, value, onChange, onValid}) => {
 
     useEffect(() => {
         if (onValid) {
-            onValid(Object.keys(invalidFields).every(i => !invalidFields[i]), invalidFields);
+            onValid(Object.keys(invalidFields)
+                .every(i => !invalidFields[i]), invalidFields);
         }
     }, [onValid, invalidFields]);
 
-    let setValue = useCallback((field, v) => setValues(vs => updateWith(vs, field, v)), [setValues]);
-    let getValue = useCallback(field => values[field], [values]);
-    let setDirty = useCallback((field) => setDirtyFields(df => updateWith(df, field, true)), [setDirtyFields]);
-    let getDirty = useCallback((field) => Object.keys(dirtyFields).includes(field), [dirtyFields]);
+    let setValue = useCallback(
+        (field, v) => setValues(vs => updateWith(vs, field, v)), [setValues]);
+    let getValue = useCallback(
+        field => values[field], [values]);
+    let setDirty = useCallback(
+        field => setDirtyFields(df => updateWith(df, field, true)), [setDirtyFields]);
+    let getDirty = useCallback(
+        field => Object.keys(dirtyFields).includes(field), [dirtyFields]);
     let setInvalid = useCallback((field, error) => {
         setInvalidFields(i => updateWith(i, field, error ? error : undefined));
     }, [setInvalidFields]);

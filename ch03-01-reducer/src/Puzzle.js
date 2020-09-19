@@ -19,8 +19,10 @@ export default () => {
             }
         </div>
         <div className='Puzzle-controls'>
-            <button className='Puzzle-shuffle' onClick={() => dispatch({type: 'shuffle'})}>Shuffle</button>
-            <button className='Puzzle-reset' onClick={() => dispatch({type: 'reset'})}>Reset</button>
+            <button className='Puzzle-shuffle'
+                    onClick={() => dispatch({type: 'shuffle'})}>Shuffle</button>
+            <button className='Puzzle-reset'
+                    onClick={() => dispatch({type: 'reset'})}>Reset</button>
         </div>
         {
             state.complete &&

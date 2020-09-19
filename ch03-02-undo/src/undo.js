@@ -2,7 +2,9 @@ import lodash from 'lodash';
 
 export default (reducer) =>
     (state, action) => {
-        let {undoHistory = [], undoActions = [], ...innerState} = lodash.cloneDeep(state);
+        let {undoHistory = [],
+            undoActions = [],
+            ...innerState} = lodash.cloneDeep(state);
         switch (action.type) {
             case 'undo': {
                 if (undoActions.length > 0) {
@@ -14,17 +16,32 @@ export default (reducer) =>
 
             case 'redo': {
                 if (undoActions.length > 0) {
-                    undoHistory = [...undoHistory, {...innerState}];
-                    undoActions = [...undoActions, undoActions[undoActions.length - 1]];
-                    innerState = (reducer(innerState, undoActions[undoActions.length - 1]));
+                    undoHistory = [
+                        ...undoHistory,
+                        {...innerState}
+                    ];
+                    undoActions = [
+                        ...undoActions,
+                        undoActions[undoActions.length - 1]
+                    ];
+                    innerState = reducer(
+                        innerState,
+                        undoActions[undoActions.length - 1]
+                    );
                 }
                 break;
             }
 
             default: {
-                undoHistory = [...undoHistory, {...innerState}];
-                undoActions = [...undoActions, action];
-                innerState = (reducer(innerState, action));
+                undoHistory = [
+                    ...undoHistory,
+                    {...innerState}
+                ];
+                undoActions = [
+                    ...undoActions,
+                    action
+                ];
+                innerState = reducer(innerState, action);
             }
         }
         return {...innerState, undoHistory, undoActions};

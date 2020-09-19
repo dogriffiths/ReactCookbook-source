@@ -25,7 +25,8 @@ export default ({onSubmit, onChange, initialValue = {}}) => {
                         setErrors(errs)
                     }}>
             <InputField name='address1'
-                        onValidate={v => (!v || v.length < 3) ? "Too short!" : null}/>
+                        onValidate={v => (!v || v.length < 3)
+                            ? "Too short!" : null}/>
 
             <InputField name='address2'
                         onValidate={v => v ? null : "Required"}/>
@@ -37,7 +38,8 @@ export default ({onSubmit, onChange, initialValue = {}}) => {
                         onValidate={v => v ? null : "Required"}/>
 
             <InputField name='price' type='number'
-                        onValidate={v => (!v || parseInt(v) < 102) ? "Must be at least 102" : null}/>
+                        onValidate={v => (!v || parseInt(v) < 102)
+                            ? "Must be at least 102" : null}/>
 
             <InputField name='requiredBy' type='date'
                         onValidate={v => v ? null : "Required"}/>

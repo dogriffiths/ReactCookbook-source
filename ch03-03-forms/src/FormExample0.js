@@ -25,7 +25,8 @@ export default ({onSubmit, onChange, initialValue = {}}) => {
                         setErrors(errs)
                     }}>
             <InputField name='field1'
-                        onValidate={v => (!v || v.length < 3) ? "Too short!" : null}/>
+                        onValidate={v => (!v || v.length < 3)
+                            ? "Too short!" : null}/>
 
             <button
                 onClick={() => onSubmit && onSubmit(formFields)}
