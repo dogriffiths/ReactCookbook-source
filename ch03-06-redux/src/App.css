@@ -1,0 +1,10 @@
+.App {
+    margin: 32px;
+    display: grid;
+    width: calc(100vw - 64px);
+    grid-template-columns: 150px auto 320px;
+}
+
+.Menu {
+    margin-right: 32px;
+}

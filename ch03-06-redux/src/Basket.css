@@ -1,0 +1,55 @@
+.Basket {
+    display: flex;
+    flex-direction: column;
+    margin-left: 32px;
+}
+
+.Basket-item {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    padding: 9px;
+}
+
+.Basket-item:nth-child(even) {
+    background-color: #ebebeb;
+}
+
+.Basket-itemPrice::before {
+    content: ' $';
+}
+
+.Basket-itemName {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.Basket-itemProductId {
+    font-size: 12px;
+    font-weight: lighter;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.Basket-itemPricing {
+    font-size: 16px;
+    text-align: right;
+    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.Basket-itemQuantity::after {
+    content: ' x ';
+}
+
+.Basket button {
+    margin-top: 16px;
+    width: 100px;
+    float: right;
+}

@@ -1,0 +1,7 @@
+.Boots dd {
+    margin-bottom: 32px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding-bottom: 16px;
+    margin-left: 0;
+}
