@@ -1,6 +1,6 @@
 {
   "name": "my-razzle-app",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "start": "razzle start",
@@ -10,12 +10,12 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "razzle": "^3.1.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
-    "cypress": "^5.2.0"
+    "cypress": "^5.3.0",
+    "razzle": "^3.3.4"
   }
 }

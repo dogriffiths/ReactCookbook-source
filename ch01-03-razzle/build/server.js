@@ -23,7 +23,7 @@ module.exports =
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "401d87ccc23e035b2b8c";
+/******/ 	var hotCurrentHash = "e839589b6739d39bb4d3";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -242,7 +242,7 @@ module.exports =
 /******/ 				};
 /******/ 			});
 /******/ 			hotUpdate = {};
-/******/ 			var chunkId = "main";
+/******/ 			var chunkId = "server";
 /******/ 			// eslint-disable-next-line no-lone-blocks
 /******/ 			{
 /******/ 				hotEnsureUpdateChunk(chunkId);
@@ -830,6 +830,68 @@ module.exports = JSON.parse("{\"client\":{\"js\":\"http://localhost:3001/static/
 
 /***/ }),
 
+/***/ "./node_modules/razzle-dev-utils/prettyNodeErrors.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/razzle-dev-utils/prettyNodeErrors.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+const fs = __webpack_require__(/*! fs */ "fs");
+const {
+  getTopFrame,
+  getStackTraceLines,
+  separateMessageFromStack,
+} = __webpack_require__(/*! jest-message-util */ "jest-message-util");
+const { codeFrameColumns } = __webpack_require__(/*! @babel/code-frame */ "@babel/code-frame");
+
+function pretty(error) {
+  const { message, stack } = error;
+  const lines = getStackTraceLines(stack);
+  const topFrame = getTopFrame(lines);
+  const fallback = `${message}${stack}`;
+
+  if (!topFrame) {
+    return fallback;
+  }
+
+  const { file, line } = topFrame;
+  try {
+    const result = codeFrameColumns(
+      fs.readFileSync(file, 'utf8'),
+      { start: { line } },
+      { highlightCode: true }
+    );
+    return `\n${message}\n\n${result}\n${stack}\n`;
+  } catch (error) {
+    return fallback;
+  }
+}
+
+function usePrettyErrors(transform) {
+  const { prepareStackTrace } = Error;
+
+  Error.prepareStackTrace = (error, trace) => {
+    const prepared = prepareStackTrace
+      ? separateMessageFromStack(prepareStackTrace(error, trace))
+      : error;
+    const transformed = transform ? transform(prepared) : prepared;
+    return pretty(transformed);
+  };
+}
+
+// Clean up Webpack's sourcemap namespacing in error stacks
+// @see https://github.com/facebook/create-react-app/blob/next/packages/react-dev-utils/formatWebpackMessages.js#L112
+const stackTransform = ({ stack = '', ...rest }) => ({
+  stack: stack.replace('/build/webpack:', ''),
+  ...rest,
+});
+
+usePrettyErrors(stackTransform);
+
+
+/***/ }),
+
 /***/ "./node_modules/webpack/hot/log-apply-result.js":
 /*!*****************************************!*\
   !*** (webpack)/hot/log-apply-result.js ***!
@@ -1236,40 +1298,41 @@ var Home = /*#__PURE__*/function (_React$Component) {
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! no exports provided */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! http */ "http");
-/* harmony import */ var http__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(http__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ "express");
+/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);
 
 
 var app = __webpack_require__(/*! ./server */ "./src/server.js")["default"];
 
-var server = http__WEBPACK_IMPORTED_MODULE_0___default.a.createServer(app);
-var currentApp = app;
-server.listen("3000" || false, function () {
-  console.log('🚀 started');
-}).on('error', function (error) {
-  console.log(error);
-});
-
 if (true) {
-  console.log('✅  Server-side HMR Enabled!');
   module.hot.accept(/*! ./server */ "./src/server.js", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { (function () {
     console.log('🔁  HMR Reloading `./server`...');
 
     try {
       app = __webpack_require__(/*! ./server */ "./src/server.js")["default"];
-      server.removeListener('request', currentApp);
-      server.on('request', app);
-      currentApp = app;
     } catch (error) {
       console.error(error);
     }
   })(__WEBPACK_OUTDATED_DEPENDENCIES__); }.bind(this));
+  console.info('✅  Server-side HMR Enabled!');
 }
+
+var port = "3000" || false;
+/* harmony default export */ __webpack_exports__["default"] = (express__WEBPACK_IMPORTED_MODULE_0___default()().use(function (req, res) {
+  return app.handle(req, res);
+}).listen(port, function (err) {
+  if (err) {
+    console.error(err);
+    return;
+  }
+
+  console.log("> Started on port ".concat(port));
+}));
 
 /***/ }),
 
@@ -1341,16 +1404,27 @@ server.disable('x-powered-by').use(express__WEBPACK_IMPORTED_MODULE_3___default.
 /***/ }),
 
 /***/ 0:
-/*!**************************************************************************!*\
-  !*** multi razzle-dev-utils/prettyNodeErrors webpack/hot/poll?300 ./src ***!
-  \**************************************************************************/
+/*!*************************************************************************************************!*\
+  !*** multi ./node_modules/razzle-dev-utils/prettyNodeErrors.js (webpack)/hot/poll.js?300 ./src ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! razzle-dev-utils/prettyNodeErrors */"razzle-dev-utils/prettyNodeErrors");
-__webpack_require__(/*! webpack/hot/poll?300 */"./node_modules/webpack/hot/poll.js?300");
+__webpack_require__(/*! /Users/davidg/Desktop/code/chapter1/razzle-cypress/app/node_modules/razzle-dev-utils/prettyNodeErrors.js */"./node_modules/razzle-dev-utils/prettyNodeErrors.js");
+__webpack_require__(/*! /Users/davidg/Desktop/code/chapter1/razzle-cypress/app/node_modules/webpack/hot/poll.js?300 */"./node_modules/webpack/hot/poll.js?300");
 module.exports = __webpack_require__(/*! /Users/davidg/Desktop/code/chapter1/razzle-cypress/app/src */"./src/index.js");
 
+
+/***/ }),
+
+/***/ "@babel/code-frame":
+/*!************************************!*\
+  !*** external "@babel/code-frame" ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@babel/code-frame");
 
 /***/ }),
 
@@ -1420,25 +1494,25 @@ module.exports = require("express");
 
 /***/ }),
 
-/***/ "http":
-/*!***********************!*\
-  !*** external "http" ***!
-  \***********************/
+/***/ "fs":
+/*!*********************!*\
+  !*** external "fs" ***!
+  \*********************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("http");
+module.exports = require("fs");
 
 /***/ }),
 
-/***/ "razzle-dev-utils/prettyNodeErrors":
-/*!****************************************************!*\
-  !*** external "razzle-dev-utils/prettyNodeErrors" ***!
-  \****************************************************/
+/***/ "jest-message-util":
+/*!************************************!*\
+  !*** external "jest-message-util" ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("razzle-dev-utils/prettyNodeErrors");
+module.exports = require("jest-message-util");
 
 /***/ }),
 
