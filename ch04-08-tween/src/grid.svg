@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+    height="600" width="1000" viewBox="0 0 1000 600" style="background-color: black">
+  <defs>
+    <pattern id="square" width="20" height="20" patternUnits="userSpaceOnUse" >
+      <rect width="20" height="20" fill='none' stroke='#122'/>
+    </pattern>
+    <pattern id="quad" width="80" height="80" patternUnits="userSpaceOnUse" >
+      <rect width="80" height="80" stroke='#366' fill="url(#square)"/>
+    </pattern>
+    <pattern id="miniquad" width="10" height="10" patternUnits="userSpaceOnUse" >
+      <rect width="10" height="10" stroke='#122' fill="url(#square)"/>
+    </pattern>
+  </defs>
+  <rect width="1000" height="600" fill="url(#miniquad)" stroke='#122' stroke-width="1"/>
+  <rect width="1000" height="600" fill="url(#quad)" stroke='#366' stroke-width="2"/>
+</svg>

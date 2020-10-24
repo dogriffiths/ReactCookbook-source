@@ -1,0 +1,32 @@
+.App {
+  margin: 32px;
+}
+
+.InfoPanel {
+    border-width: 1px;
+    border-style: solid;
+    display: inline-block;
+    padding: 12px;
+    max-width: 400px;
+}
+
+.InfoPanel h1 {
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.InfoPanel button {
+    margin-left: 8px;
+    float: right;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+
+img {
+    width: 350px;
+    height: 350px;
+}

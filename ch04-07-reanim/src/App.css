@@ -1,0 +1,9 @@
+.App {
+    margin: 32px;
+}
+
+img {
+    float: left;
+    margin: 16px;
+    cursor: pointer;
+}

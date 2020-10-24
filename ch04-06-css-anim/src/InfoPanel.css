@@ -1,0 +1,9 @@
+.InfoPanel-details {
+    height: 350px;
+    overflow-y: scroll;
+    transition: height 0.5s;
+}
+
+.InfoPanel-details.InfoPanel-details-closed {
+    height: 0;
+}

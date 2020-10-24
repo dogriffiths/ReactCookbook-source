@@ -1,0 +1,38 @@
+body {
+    background-color: aliceblue;
+}
+
+button {
+    background-color: #eee;
+    height: 32px;
+}
+
+.App {
+    margin: 32px;
+}
+
+.App-error, .App-message {
+    display: block;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.App-error {
+    color: red;
+}
+
+.App-message {
+    color: blue;
+}
+
+.App-dialog {
+    background-color: white;
+    width: 400px;
+    border: 1px solid black;
+    box-shadow: black 5px 10px 15px;
+    padding: 32px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

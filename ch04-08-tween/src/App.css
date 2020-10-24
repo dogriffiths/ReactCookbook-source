@@ -1,0 +1,48 @@
+body {
+    color: white;
+    background-color: black;
+    font-family: 'Racing Sans One', cursive;
+}
+
+.App {
+    margin: 0;
+}
+
+h1 {
+    position: absolute;
+    top: 20px;
+    left: 750px;
+}
+
+.tracking {
+    border-color: #888;
+    border-radius: 16px;
+    border-style: solid;
+    position: absolute;
+    top: 450px;
+    left: 24px;
+    color: white;
+    background-color: black;
+    padding: 8px;
+}
+
+.tracking th {
+    color: lime;
+    min-width: 60px;
+    text-align: right;
+}
+
+.tracking th:first-child {
+    text-align: left;
+}
+
+.tracking td:first-child {
+    color: yellow;
+    text-align: left;
+}
+
+.tracking td {
+    min-width: 60px;
+    text-align: right;
+    padding: 8px;
+}

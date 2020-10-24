@@ -1,0 +1,35 @@
+.HelpBubble-container {
+    background-color: #ffef64;
+    color: black;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #c0c0c0;
+    border-radius: 2px;
+    padding: 12px;
+    font-family: "Arial", sans-serif;
+    font-size: 10pt;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    max-width: 300px;
+}
+
+.HelpBubble-controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.HelpBubble-control {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #676767;
+}
+
+.HelpBubble-close {
+    color: #676767;
+    cursor: pointer;
+    display: block;
+    text-align: right;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
