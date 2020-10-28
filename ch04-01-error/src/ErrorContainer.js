@@ -25,7 +25,6 @@ export default (props) => {
     }, []);
     return (
         <ErrorHandlerProvider
-            fred="2"
             callback={callback}
         >
             {props.children}
