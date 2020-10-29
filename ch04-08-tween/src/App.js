@@ -53,7 +53,7 @@ function App() {
             <TweenOne component='g' animation={{
                 ...followAnimation,
                 delay: 3000,
-                duration: 16000,
+                duration: 15500,
                 onUpdate: (info) => setBlueTelemetry(
                     (telemetry) => trackVehicle(info, telemetry)),
             }}>
