@@ -9,7 +9,6 @@ export default () => {
         try {
             await axios.put('/clockTime');
         } catch(err) {
-            console.log('XXXXXX err', err)
             setVisibleError('Unable to record work start time', err);
         }
     };

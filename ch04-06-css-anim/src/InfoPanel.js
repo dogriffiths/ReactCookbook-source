@@ -12,7 +12,8 @@ export default ({title, children}) => {
                 {open ? '🔼' : '​🔽'}
             </button>
         </h1>
-        <div className={`InfoPanel-details ${(open ? '' : 'InfoPanel-details-closed')}`}>
+        <div className={`InfoPanel-details ${(open ? '' 
+                : 'InfoPanel-details-closed')}`}>
             {children}
         </div>
     </section>

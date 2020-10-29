@@ -8,7 +8,9 @@ export default () => {
     return <section className='Forum'>
         <MDEditor height={300} value={text} onChange={setText}/>
         <button onClick={() => {
-            setMessages(msgs => [{body: text, timestamp: new Date().toISOString()}, ...msgs]);
+            setMessages(msgs => [{
+                body: text,
+                timestamp: new Date().toISOString()}, ...msgs]);
             setText('');
         }}>Post
         </button>
