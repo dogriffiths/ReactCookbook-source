@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import {useState} from "react";
 import useSecurity from "./useSecurity";
 
 export default () => {

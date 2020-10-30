@@ -1,5 +1,4 @@
 import useSecurity from "./useSecurity";
-import React from "react";
 
 export default () => {
     const {logout} = useSecurity();

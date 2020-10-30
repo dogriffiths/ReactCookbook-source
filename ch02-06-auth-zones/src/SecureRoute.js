@@ -1,4 +1,3 @@
-import React from 'react';
 import Login from "./Login";
 import {Route} from "react-router-dom";
 import useSecurity from "./useSecurity";
