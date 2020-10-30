@@ -1,4 +1,3 @@
-import React from 'react';
 import Media from "react-media";
 import {Redirect, Route, Switch} from "react-router-dom";
 import Person from "./Person";
