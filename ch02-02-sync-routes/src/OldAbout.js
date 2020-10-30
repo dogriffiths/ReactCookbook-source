@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import {useState} from "react";
 import People from "./People";
 import Offices from "./Offices";
 
