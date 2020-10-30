@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import './App.css';
 import {BrowserRouter, Link, Route, Switch} from "react-router-dom";
 import Important from "./Important";
