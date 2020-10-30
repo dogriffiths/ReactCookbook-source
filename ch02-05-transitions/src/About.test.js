@@ -1,13 +1,12 @@
 import {MemoryRouter} from "react-router";
 import {Route} from "react-router-dom";
-import {fireEvent, render} from '@testing-library/react';
-import React from "react";
+import {fireEvent, render, screen} from '@testing-library/react';
 
 import About from './About';
 
 describe('About component', () => {
     it('should show people by default', () => {
-        const { getByText } = render (<MemoryRouter initialEntries={[
+        render (<MemoryRouter initialEntries={[
             {pathname: '/about'},
         ]}>
             <Route path='/about/:tabId?'>
@@ -15,13 +14,13 @@ describe('About component', () => {
             </Route>
         </MemoryRouter>);
 
-        expect(getByText('Kip Russel')).toBeInTheDocument();
+        expect(screen.getByText('Kip Russel')).toBeInTheDocument();
 
-        fireEvent(getByText('Offices'), new MouseEvent('click', {
+        fireEvent(screen.getByText('Offices'), new MouseEvent('click', {
             bubbles: true,
             cancelable: true,
         }));
 
-        expect(getByText('South Dakota')).toBeInTheDocument();
+        expect(screen.getByText('South Dakota')).toBeInTheDocument();
     });
 });

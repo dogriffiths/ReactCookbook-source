@@ -1,4 +1,3 @@
-import React from "react";
 import {NavLink, Redirect, Route, Switch, useLocation} from "react-router-dom";
 import People from "./People";
 import Offices from "./Offices";
