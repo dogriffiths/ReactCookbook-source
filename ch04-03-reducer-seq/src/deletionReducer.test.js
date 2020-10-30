@@ -50,11 +50,7 @@ describe('deletionReducer', () => {
         expect(actual.deleteButtonDisabled).toBe(false);
     });
     it('should throw an error if an unknown action is dispatched', () => {
-        try {
-            deletionReducer({}, {type: 'SOMETHING_BAD'})
-            throw new Error('Should have thrown an error!');
-        } catch(err) {
-            expect(err.message).toEqual('Unknown action: SOMETHING_BAD');
-        }
+        const t = () => deletionReducer({}, {type: 'SOMETHING_BAD'});
+        expect(t).toThrow(new Error('Unknown action: SOMETHING_BAD'));
     })
 });
