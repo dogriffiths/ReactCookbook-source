@@ -1,5 +1,3 @@
-import React from "react";
-
 export default () => <dl>
     <dt>South Dakota</dt>
     <dd>18627 Sporer Mews<br/>

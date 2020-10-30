@@ -1,4 +1,3 @@
-import React from "react";
 import {NavLink, Redirect, Route, Switch} from "react-router-dom";
 import "./About.css";
 import People from "./People";

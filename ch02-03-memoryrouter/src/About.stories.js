@@ -1,4 +1,3 @@
-import React from 'react';
 import {MemoryRouter} from "react-router";
 import {Route, BrowserRouter} from "react-router-dom";
 import About from './About';
