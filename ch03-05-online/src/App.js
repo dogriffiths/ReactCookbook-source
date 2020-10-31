@@ -1,4 +1,3 @@
-import React from 'react';
 import useOnline from './useOnline';
 import './App.css';
 
