@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import {useState} from "react";
 import SimpleForm, {InputField} from "./SimpleForm";
 
 export default {

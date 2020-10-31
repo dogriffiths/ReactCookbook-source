@@ -1,5 +1,3 @@
-import React from "react";
-
 import './ShowData.css';
 
 export default ({formFields, valid, errors}) => <div className='ShowData'>
