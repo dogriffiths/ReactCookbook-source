@@ -1,4 +1,4 @@
-import React, {useCallback, useState} from "react";
+import {useCallback, useState} from "react";
 import ErrorHandlerProvider from "./ErrorHandlerProvider";
 import ErrorDialog from "./ErrorDialog";
 

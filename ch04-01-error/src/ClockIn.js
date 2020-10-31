@@ -1,4 +1,3 @@
-import React from "react";
 import useErrorHandler from "./useErrorHandler";
 import axios from "axios";
 

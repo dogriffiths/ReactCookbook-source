@@ -1,4 +1,3 @@
-import React from 'react';
 import './App.css';
 import ErrorContainer from "./ErrorContainer";
 import ClockIn from "./ClockIn";

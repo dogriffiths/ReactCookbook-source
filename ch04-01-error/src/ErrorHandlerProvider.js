@@ -1,4 +1,3 @@
-import React from "react";
 import ErrorHandlerContext from "./ErrorHandlerContext";
 
 let setError = () => {};
