@@ -1,44 +1,44 @@
 import {MemoryRouter} from "react-router";
 import {Route} from "react-router-dom";
-import {fireEvent, render} from '@testing-library/react';
+import {fireEvent, render, screen} from '@testing-library/react';
 import React from "react";
 
 import About from './About';
 
 describe('About component', () => {
     it.skip('this will break because there is no router', () => {
-        const {getByText} = render(<About/>);
+        render(<About/>);
 
-        expect(getByText('Kip Russel')).toBeInTheDocument();
+        expect(screen.getByText('Kip Russel')).toBeInTheDocument();
     });
     it('should show people', () => {
-        const {getByText} = render(<MemoryRouter><About/></MemoryRouter>);
+        render(<MemoryRouter><About/></MemoryRouter>);
 
-        expect(getByText('Kip Russel')).toBeInTheDocument();
+        expect(screen.getByText('Kip Russel')).toBeInTheDocument();
     });
     it('should show offices if in route', () => {
-        const {getByText} = render(<MemoryRouter initialEntries={[
+        render(<MemoryRouter initialEntries={[
             {pathname: '/about/offices'},
         ]}>
             <About/>
         </MemoryRouter>);
 
-        expect(getByText('South Dakota')).toBeInTheDocument();
+        expect(screen.getByText('South Dakota')).toBeInTheDocument();
     });
     it('should be able to click to offices', () => {
-        const {getByText} = render(<MemoryRouter initialEntries={[
+        render(<MemoryRouter initialEntries={[
             {pathname: '/about'},
         ]}>
             <About/>
         </MemoryRouter>);
 
-        expect(getByText('Kip Russel')).toBeInTheDocument();
+        expect(screen.getByText('Kip Russel')).toBeInTheDocument();
 
-        fireEvent(getByText('Offices'), new MouseEvent('click', {
+        fireEvent(screen.getByText('Offices'), new MouseEvent('click', {
             bubbles: true,
             cancelable: true,
         }));
 
-        expect(getByText('South Dakota')).toBeInTheDocument();
+        expect(screen.getByText('South Dakota')).toBeInTheDocument();
     });
 });
