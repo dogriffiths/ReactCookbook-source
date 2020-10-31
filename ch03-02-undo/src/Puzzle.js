@@ -1,4 +1,3 @@
-import React from "react";
 import reducer from "./reducer";
 import useUndoReducer from "./useUndoReducer";
 
