@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import {useState} from "react";
 import MDEditor from '@uiw/react-md-editor';
 
 export default () => {
