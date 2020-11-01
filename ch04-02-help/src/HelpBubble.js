@@ -1,4 +1,3 @@
-import React from "react";
 import {Popper} from "@material-ui/core";
 import './HelpBubble.css';
 
