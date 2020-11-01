@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import {pulse, zoomOut, shake, merge} from 'react-animations';
 import Radium, {StyleRoot} from 'radium';
 
