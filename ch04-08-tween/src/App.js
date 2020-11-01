@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import TweenOne from 'rc-tween-one';
 import Details from "./Details";
 import path from './track';

@@ -1,5 +1,3 @@
-import React from "react";
-
 export default ({redTelemetry, blueTelemetry}) => {
     return <table className='tracking'>
         <thead>
