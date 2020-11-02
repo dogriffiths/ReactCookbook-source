@@ -1,13 +1,13 @@
-Started GET "/example/index.html" for 127.0.0.1 at 2020-10-30 09:04:03 +0000
-  [1m[35m (3.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/example/index.html" for 127.0.0.1 at 2020-11-02 08:37:32 +0000
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
 Processing by ExampleController#index as HTML
   Rendering example/index.html.erb within layouts/application
 [Webpacker] Compiling...
 [Webpacker] Compiled all packs in /Users/davidg/Desktop/code/chapter1/rails-cypress/app/public/packs
 [Webpacker] Hash: c3de5eb866bb07c2f8c1
 Version: webpack 4.44.2
-Time: 16400ms
-Built at: 10/30/2020 9:04:24 AM
+Time: 8222ms
+Built at: 11/02/2020 8:37:43 AM
                                      Asset        Size       Chunks                         Chunk Names
     js/application-9afcbb5693aa87623e69.js     124 KiB  application  [emitted] [immutable]  application
 js/application-9afcbb5693aa87623e69.js.map     139 KiB  application  [emitted] [dev]        application
@@ -27,8 +27,8 @@ Entrypoint hello_react = js/hello_react-700032624493f23a298c.js js/hello_react-7
 [./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
     + 18 hidden modules
 
-  Rendered example/index.html.erb within layouts/application (Duration: 21362.4ms | Allocations: 3826)
+  Rendered example/index.html.erb within layouts/application (Duration: 11583.8ms | Allocations: 3999)
 [Webpacker] Everything's up-to-date. Nothing to do
-Completed 200 OK in 21527ms (Views: 21510.9ms | ActiveRecord: 0.0ms | Allocations: 23312)
+Completed 200 OK in 11713ms (Views: 11700.6ms | ActiveRecord: 0.0ms | Allocations: 23935)
 
 
