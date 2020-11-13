@@ -1,25 +1,63 @@
-import logo from './logo.svg';
 import './App.css';
+import {useState} from "react";
+import useMessages from "./useMessages";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const {
+        data: messages,
+        loading: messagesLoading,
+        readError: messagesError,
+        create: createMessage,
+        creating: creatingMessage,
+        createError: createMessageError
+    } = useMessages('nasa');
+    const [text, setText] = useState();
+    const [author, setAuthor] = useState();
+
+    return (
+        <div className="App">
+            <input type='text' value={author} placeholder='Author'
+                   onChange={evt => setAuthor(evt.target.value)}/>
+            <textarea value={text} placeholder='Message'
+                      onChange={evt => setText(evt.target.value)}/>
+            <button onClick={async () => {
+                try {
+                    await createMessage({author, text});
+                    setText('');
+                    setAuthor('');
+                } catch(err) {}
+            }}
+                    disabled={creatingMessage}
+            >Post
+            </button>
+            {
+                createMessageError ?
+                    <div className='error'>
+                        Unable to create message
+                        <div className='error-contents'>
+                            {createMessageError.message}
+                        </div>
+                    </div> : null
+            }
+            {
+                messagesError ?
+                    <div className='error'>
+                        Something went wrong:
+                        <div className='error-contents'>
+                            {messagesError.message}
+                        </div>
+                    </div>
+                    : messagesLoading ?
+                    <div className='loading'>Loading...</div>
+                    :
+                    (messages && messages.length) ? <dl>{messages.map(m => <>
+                            <dt>{m.author}</dt>
+                            <dd>{m.text}</dd>
+                        </>)}</dl>
+                        : 'No messages'
+            }
+        </div>
+    );
 }
 
 export default App;
