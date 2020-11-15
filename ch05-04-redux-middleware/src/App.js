@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import {Provider} from 'react-redux'
+import {createStore, applyMiddleware} from 'redux';
 import './App.css';
+
+import reducer from "./reducer";
+import Search from "./Search";
+import axiosMiddleware from "./axiosMiddleware";
+
+const store = createStore(reducer, applyMiddleware(axiosMiddleware));
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Provider store={store}>
+            <Search/>
+        </Provider>
     </div>
   );
 }
