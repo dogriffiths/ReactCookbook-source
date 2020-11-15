@@ -1,0 +1,15 @@
+.App {
+  margin: 32px;
+}
+
+table {
+    margin-top: 32px;
+}
+
+th {
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: aliceblue;
+}
