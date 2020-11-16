@@ -1,4 +1,4 @@
-import {useQuery, gql, useMutation} from '@apollo/client';
+import {gql, useMutation, useQuery} from '@apollo/client';
 import {useState} from "react";
 
 const MESSAGES = gql`
@@ -24,7 +24,7 @@ const ADD_MESSAGE = gql`
     }
 `;
 
-export default () => {
+let Forum = () => {
     const { loading: messagesLoading, error: messagesError, data } = useQuery(MESSAGES);
     const [addMessage] = useMutation(ADD_MESSAGE);
     const [text, setText] = useState();
@@ -45,18 +45,9 @@ export default () => {
                     setAuthor('');
                 } catch(err) {}
             }}
-                    // disabled={creatingMessage}
+                // disabled={creatingMessage}
             >Post
             </button>
-            {/*{*/}
-            {/*    createMessageError ?*/}
-            {/*        <div className='error'>*/}
-            {/*            Unable to create message*/}
-            {/*            <div className='error-contents'>*/}
-            {/*                {createMessageError.message}*/}
-            {/*            </div>*/}
-            {/*        </div> : null*/}
-            {/*}*/}
             {
                 messagesError ?
                     <div className='error'>
@@ -77,3 +68,4 @@ export default () => {
         </div>
     );
 };
+export default Forum;

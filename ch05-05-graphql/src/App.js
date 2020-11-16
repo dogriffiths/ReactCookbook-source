@@ -1,26 +1,4 @@
-import logo from './logo.svg';
 import './App.css';
-
-/*
-mutation AddMessage(
-    $author: String!
-    $text: String!
-  ) {
-    addMessage(
-      author: $author
-      text: $text
-    ) {
-       author
-      text
-    }
-  }
-
-  {
-  "author": "David Griffiths",
-  "text": "This is a new message"
-}
- */
-
 import {ApolloClient, ApolloProvider, InMemoryCache} from '@apollo/client';
 import Forum from "./Forum";
 
