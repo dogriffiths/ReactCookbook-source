@@ -6,13 +6,13 @@ function App() {
     const {
         data: messages,
         loading: messagesLoading,
-        readError: messagesError,
+        error: messagesError,
         create: createMessage,
         creating: creatingMessage,
-        createError: createMessageError
     } = useMessages('nasa');
     const [text, setText] = useState();
     const [author, setAuthor] = useState();
+    const [createMessageError, setCreateMessageError] = useState();
 
     return (
         <div className="App">
@@ -25,7 +25,9 @@ function App() {
                     await createMessage({author, text});
                     setText('');
                     setAuthor('');
-                } catch(err) {}
+                } catch(err) {
+                    setCreateMessageError(err);
+                }
             }}
                     disabled={creatingMessage}
             >Post

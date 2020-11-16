@@ -3,13 +3,11 @@ import {useCallback, useEffect, useState} from "react";
 const useMessages = (forum) => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
-    const [readError, setReadError] = useState();
+    const [error, setError] = useState();
     const [creating, setCreating] = useState(false);
-    const [createError, setCreateError] = useState();
     const [stateVersion, setStateVersion] = useState(0);
 
     const create = useCallback(async (message) => {
-        setCreateError(null);
         try {
             setCreating(true);
             const response = await fetch(`/messages/${forum}`, {
@@ -26,16 +24,13 @@ const useMessages = (forum) => {
                 );
             }
             setStateVersion(v => v + 1);
-        } catch(err) {
-            setCreateError(err);
-            throw err;
         } finally {
             setCreating(false);
         }
     }, [forum]);
 
     useEffect(() => {
-        setReadError(null);
+        setError(null);
         if (forum) {
             (async () => {
                 try {
@@ -50,7 +45,7 @@ const useMessages = (forum) => {
                     const body = await response.json();
                     setData(body);
                 } catch (err) {
-                    setReadError(err);
+                    setError(err);
                 } finally {
                     setLoading(false);
                 }
@@ -61,7 +56,7 @@ const useMessages = (forum) => {
         }
     }, [forum, stateVersion]);
 
-    return {data, loading, readError, create, creating, createError};
+    return {data, loading, error, create, creating};
 };
 
 export default useMessages;
