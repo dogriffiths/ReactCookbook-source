@@ -1,33 +1,9 @@
-import {useCallback, useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 
 const useMessages = (forum) => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState();
-    const [creating, setCreating] = useState(false);
-    const [stateVersion, setStateVersion] = useState(0);
-
-    const create = useCallback(async (message) => {
-        try {
-            setCreating(true);
-            const response = await fetch(`/messages/${forum}`, {
-                method: 'POST',
-                body: JSON.stringify(message),
-                headers: {
-                    "Content-type": "application/json; charset=UTF-8"
-                }
-            });
-            if (!response.ok) {
-                const text = await response.text();
-                throw new Error(
-                    `Unable to create a ${forum} message: ${text}`
-                );
-            }
-            setStateVersion(v => v + 1);
-        } finally {
-            setCreating(false);
-        }
-    }, [forum]);
 
     useEffect(() => {
         setError(null);
@@ -44,7 +20,7 @@ const useMessages = (forum) => {
                     }
                     const body = await response.json();
                     setData(body);
-                } catch (err) {
+                } catch(err) {
                     setError(err);
                 } finally {
                     setLoading(false);
@@ -54,9 +30,9 @@ const useMessages = (forum) => {
             setData([]);
             setLoading(false);
         }
-    }, [forum, stateVersion]);
+    }, [forum]);
 
-    return {data, loading, error, create, creating};
+    return {data, loading, error};
 };
 
 export default useMessages;

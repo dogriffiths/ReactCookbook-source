@@ -1,6 +1,6 @@
 import './App.css';
 import {useState} from "react";
-import useMessages from "./useMessages";
+import useForum from "./useForum";
 
 function App() {
     const {
@@ -9,7 +9,7 @@ function App() {
         error: messagesError,
         create: createMessage,
         creating: creatingMessage,
-    } = useMessages('nasa');
+    } = useForum('nasa');
     const [text, setText] = useState();
     const [author, setAuthor] = useState();
     const [createMessageError, setCreateMessageError] = useState();
