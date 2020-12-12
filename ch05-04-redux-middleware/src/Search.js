@@ -4,7 +4,8 @@ import {useDispatch, useSelector} from "react-redux";
 
 let Search = () => {
     const [terms, setTerms] = useState();
-    const {data: results, error, loading} = useSelector(state => state.searchResults || {});
+    const {data: results, error, loading}
+    = useSelector(state => state.searchResults || {});
     const dispatch = useDispatch();
 
     return (
@@ -14,7 +15,10 @@ let Search = () => {
                 type='text' value={terms}
                 onChange={e => {
                     setTerms(e.target.value);
-                    dispatch({type: 'SEARCH', payload: e.target.value});
+                    dispatch({
+                        type: 'SEARCH',
+                        payload: e.target.value
+                    });
                 }}
             />
             {

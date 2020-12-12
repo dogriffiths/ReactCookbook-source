@@ -1,25 +1,20 @@
-import logo from './logo.svg';
+import {FixedSizeList} from "react-window";
+import DateRow from "./DateRow";
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <FixedSizeList
+                height={400}
+                itemCount={10000}
+                itemSize={40}
+                width={300}
+            >
+                {DateRow}
+            </FixedSizeList>
+        </div>
+    );
 }
 
 export default App;

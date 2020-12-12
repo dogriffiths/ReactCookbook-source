@@ -25,7 +25,7 @@ const ADD_MESSAGE = gql`
 `;
 
 let Forum = () => {
-    const { loading: messagesLoading, error: messagesError, data } = useQuery(MESSAGES);
+    const {loading: messagesLoading, error: messagesError, data} = useQuery(MESSAGES);
     const [addMessage] = useMutation(ADD_MESSAGE);
     const [text, setText] = useState();
     const [author, setAuthor] = useState();
@@ -40,12 +40,13 @@ let Forum = () => {
                       onChange={evt => setText(evt.target.value)}/>
             <button onClick={async () => {
                 try {
-                    await addMessage({variables: {author, text}, refetchQueries: ['Messages']});
+                    await addMessage({variables: {author, text},
+                        refetchQueries: ['Messages']});
                     setText('');
                     setAuthor('');
-                } catch(err) {}
+                } catch (err) {
+                }
             }}
-                // disabled={creatingMessage}
             >Post
             </button>
             {

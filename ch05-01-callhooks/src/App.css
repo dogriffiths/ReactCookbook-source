@@ -17,6 +17,7 @@ dd {
 
 .error {
     color: red;
+    font-size: 80%;
 }
 
 .error-contents {

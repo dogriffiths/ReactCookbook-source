@@ -1,0 +1,34 @@
+type Query {
+    Message(id: ID!): Message
+    allMessages(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: MessageFilter): [Message]
+    _allMessagesMeta(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: MessageFilter): ListMetadata
+}
+
+type Message {
+    id: ID!
+    author: String!
+    text: String!
+}
+
+type Mutation {
+    createMessage(
+        author: String!
+        text: String!
+    ): Message
+    updateMessage(
+        id: ID!
+        author: String!
+        text: String!
+    ): Message
+    deleteMessage(id: ID!): Message
+}
+
+input MessageFilter {
+    q: String
+    author: String
+    text: String
+}
+
+type ListMetadata {
+    count: Int!
+}

@@ -3,12 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "fontsource-roboto": "^3.1.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-scripts": "4.0.0",
+    "react-scripts": "4.0.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
@@ -36,6 +39,6 @@
     ]
   },
   "devDependencies": {
-    "cypress": "^5.5.0"
+    "cypress": "^6.0.0"
   }
 }
