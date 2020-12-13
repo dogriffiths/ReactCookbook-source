@@ -101,8 +101,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-var _this = undefined,
-    _jsxFileName = "/Users/davidg/Desktop/code/chapter1/rails-cypress/app/app/javascript/packs/hello_react.jsx";
+var _jsxFileName = "/Users/davidg/Desktop/code/chapter1/rails-cypress/app/app/javascript/packs/hello_react.jsx",
+    _this = undefined;
 
 // Run this example by adding <%= javascript_pack_tag 'hello_react' %> to the head of your layout file,
 // like app/views/layouts/application.html.erb. All it does is render <div>Hello React</div> at the bottom
@@ -30913,4 +30913,4 @@ if (false) {} else {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=hello_react-700032624493f23a298c.js.map
+//# sourceMappingURL=hello_react-a4679aefcde47572ffa0.js.map

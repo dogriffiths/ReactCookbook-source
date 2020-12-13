@@ -1584,9 +1584,9 @@ Released under the MIT license
 
         if (!options.crossDomain) {
           xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+          CSRFProtection(xhr);
         }
 
-        CSRFProtection(xhr);
         xhr.withCredentials = !!options.withCredentials;
 
         xhr.onreadystatechange = function () {
@@ -3240,4 +3240,4 @@ module.exports = function (module) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=application-9afcbb5693aa87623e69.js.map
+//# sourceMappingURL=application-c229f7c7014cf8c8d494.js.map

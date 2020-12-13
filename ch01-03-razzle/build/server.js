@@ -23,7 +23,7 @@ module.exports =
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "e839589b6739d39bb4d3";
+/******/ 	var hotCurrentHash = "50f81b346c167206576e";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -1100,21 +1100,10 @@ var _jsxFileName = "/Users/davidg/Desktop/code/chapter1/razzle-cypress/app/src/A
 
 
 var App = function App() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7,
-      columnNumber: 3
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
     path: "/",
-    component: _Home__WEBPACK_IMPORTED_MODULE_2__["default"],
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8,
-      columnNumber: 5
-    }
+    component: _Home__WEBPACK_IMPORTED_MODULE_2__["default"]
   }));
 };
 
@@ -1190,99 +1179,23 @@ var Home = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "Home",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 8,
-          columnNumber: 7
-        }
+        className: "Home"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "Home-header",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 9,
-          columnNumber: 9
-        }
+        className: "Home-header"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         src: _react_svg__WEBPACK_IMPORTED_MODULE_6___default.a,
         className: "Home-logo",
-        alt: "logo",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 10,
-          columnNumber: 11
-        }
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h2", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 11,
-          columnNumber: 11
-        }
-      }, "Welcome to Razzle")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
-        className: "Home-intro",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 13,
-          columnNumber: 9
-        }
-      }, "To get started, edit ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("code", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 14,
-          columnNumber: 32
-        }
-      }, "src/App.js"), " or", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("code", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 15,
-          columnNumber: 11
-        }
-      }, "src/Home.js"), " and save to reload."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("ul", {
-        className: "Home-resources",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 17,
-          columnNumber: 9
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 18,
-          columnNumber: 11
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
-        href: "https://github.com/jaredpalmer/razzle",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 19,
-          columnNumber: 13
-        }
-      }, "Docs")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 21,
-          columnNumber: 11
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
-        href: "https://github.com/jaredpalmer/razzle/issues",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 22,
-          columnNumber: 13
-        }
-      }, "Issues")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 24,
-          columnNumber: 11
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
-        href: "https://palmer.chat",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 25,
-          columnNumber: 13
-        }
+        alt: "logo"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h2", null, "Welcome to Razzle")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "Home-intro"
+      }, "To get started, edit ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("code", null, "src/App.js"), " or", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("code", null, "src/Home.js"), " and save to reload."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("ul", {
+        className: "Home-resources"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        href: "https://github.com/jaredpalmer/razzle"
+      }, "Docs")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        href: "https://github.com/jaredpalmer/razzle/issues"
+      }, "Issues")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        href: "https://palmer.chat"
       }, "Community Slack"))));
     }
   }]);
@@ -1379,19 +1292,8 @@ server.disable('x-powered-by').use(express__WEBPACK_IMPORTED_MODULE_3___default.
   var context = {};
   var markup = Object(react_dom_server__WEBPACK_IMPORTED_MODULE_4__["renderToString"])( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["StaticRouter"], {
     context: context,
-    location: req.url,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16,
-      columnNumber: 7
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_App__WEBPACK_IMPORTED_MODULE_0__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17,
-      columnNumber: 9
-    }
-  })));
+    location: req.url
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_App__WEBPACK_IMPORTED_MODULE_0__["default"], null)));
 
   if (context.url) {
     res.redirect(context.url);

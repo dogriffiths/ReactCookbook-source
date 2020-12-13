@@ -15,7 +15,7 @@
     "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
-    "cypress": "^6.0.0",
-    "razzle": "^3.3.7"
+    "cypress": "^6.1.0",
+    "razzle": "^3.3.8"
   }
 }

@@ -19,7 +19,7 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "cypress": "^6.0.0",
+    "cypress": "^6.1.0",
     "prettier": "2.1.2"
   },
   "keywords": [

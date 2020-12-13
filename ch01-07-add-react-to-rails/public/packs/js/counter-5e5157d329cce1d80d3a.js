@@ -99,8 +99,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-var _this = undefined,
-    _jsxFileName = "/Users/davidg/Desktop/code/chapter1/rails-cypress/app/app/javascript/packs/counter.jsx";
+var _jsxFileName = "/Users/davidg/Desktop/code/chapter1/rails-cypress/app/app/javascript/packs/counter.jsx",
+    _this = undefined;
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
@@ -29903,4 +29903,4 @@ if (false) {} else {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=counter-1fc2cec556685a1b9ed4.js.map
+//# sourceMappingURL=counter-5e5157d329cce1d80d3a.js.map

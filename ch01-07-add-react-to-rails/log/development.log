@@ -1,24 +1,24 @@
-Started GET "/example/index.html" for 127.0.0.1 at 2020-11-24 09:07:20 +0000
-  [1m[35m (2.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/example/index.html" for 127.0.0.1 at 2020-12-13 07:39:11 +0000
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
 Processing by ExampleController#index as HTML
   Rendering example/index.html.erb within layouts/application
 [Webpacker] Compiling...
 [Webpacker] Compiled all packs in /Users/davidg/Desktop/code/chapter1/rails-cypress/app/public/packs
-[Webpacker] Hash: c3de5eb866bb07c2f8c1
+[Webpacker] Hash: 9f9620f04d55fd6d4970
 Version: webpack 4.44.2
-Time: 7552ms
-Built at: 11/24/2020 9:07:31 AM
+Time: 9128ms
+Built at: 12/13/2020 7:39:24 AM
                                      Asset        Size       Chunks                         Chunk Names
-    js/application-9afcbb5693aa87623e69.js     124 KiB  application  [emitted] [immutable]  application
-js/application-9afcbb5693aa87623e69.js.map     139 KiB  application  [emitted] [dev]        application
-        js/counter-1fc2cec556685a1b9ed4.js    1.06 MiB      counter  [emitted] [immutable]  counter
-    js/counter-1fc2cec556685a1b9ed4.js.map    1.23 MiB      counter  [emitted] [dev]        counter
-    js/hello_react-700032624493f23a298c.js     1.1 MiB  hello_react  [emitted] [immutable]  hello_react
-js/hello_react-700032624493f23a298c.js.map    1.27 MiB  hello_react  [emitted] [dev]        hello_react
+    js/application-c229f7c7014cf8c8d494.js     124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map     139 KiB  application  [emitted] [dev]        application
+        js/counter-5e5157d329cce1d80d3a.js    1.06 MiB      counter  [emitted] [immutable]  counter
+    js/counter-5e5157d329cce1d80d3a.js.map    1.23 MiB      counter  [emitted] [dev]        counter
+    js/hello_react-a4679aefcde47572ffa0.js     1.1 MiB  hello_react  [emitted] [immutable]  hello_react
+js/hello_react-a4679aefcde47572ffa0.js.map    1.27 MiB  hello_react  [emitted] [dev]        hello_react
                              manifest.json  1010 bytes               [emitted]              
-Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
-Entrypoint counter = js/counter-1fc2cec556685a1b9ed4.js js/counter-1fc2cec556685a1b9ed4.js.map
-Entrypoint hello_react = js/hello_react-700032624493f23a298c.js js/hello_react-700032624493f23a298c.js.map
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint counter = js/counter-5e5157d329cce1d80d3a.js js/counter-5e5157d329cce1d80d3a.js.map
+Entrypoint hello_react = js/hello_react-a4679aefcde47572ffa0.js js/hello_react-a4679aefcde47572ffa0.js.map
 [./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
 [./app/javascript/channels/index.js] 211 bytes {application} [built]
 [./app/javascript/packs/application.js] 749 bytes {application} [built]
@@ -27,8 +27,8 @@ Entrypoint hello_react = js/hello_react-700032624493f23a298c.js js/hello_react-7
 [./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
     + 18 hidden modules
 
-  Rendered example/index.html.erb within layouts/application (Duration: 10705.9ms | Allocations: 3996)
+  Rendered example/index.html.erb within layouts/application (Duration: 12141.5ms | Allocations: 4001)
 [Webpacker] Everything's up-to-date. Nothing to do
-Completed 200 OK in 10796ms (Views: 10785.6ms | ActiveRecord: 0.0ms | Allocations: 24876)
+Completed 200 OK in 12262ms (Views: 12248.2ms | ActiveRecord: 0.0ms | Allocations: 23288)
 
 
