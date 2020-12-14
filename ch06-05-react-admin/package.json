@@ -9,7 +9,7 @@
     "apollo-server": "^2.19.0",
     "ra-data-graphql-simple": "^3.10.2",
     "react": "^17.0.1",
-    "react-admin": "^3.10.4",
+    "react-admin": "^3.11.0",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
     "require-text": "0.0.1",
