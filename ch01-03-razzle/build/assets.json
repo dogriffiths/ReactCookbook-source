@@ -1,1 +1,18 @@
-{"client":{"js":"http://localhost:3001/static/js/bundle.js"},"":{"json":"http://localhost:3001/../chunks.json","svg":"http://localhost:3001/static/media/react.be7b83d4.svg"}}
+{
+  "client": {
+    "js": [
+      "http://localhost:3001/static/js/client.js"
+    ],
+    "map": [
+      "http://localhost:3001/static/js/client.js.map"
+    ],
+    "chunks": [
+      "client"
+    ]
+  },
+  "noentry": {
+    "svg": [
+      "http://localhost:3001/static/media/react.be7b83d4.svg"
+    ]
+  }
+}

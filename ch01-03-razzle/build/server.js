@@ -23,7 +23,7 @@ module.exports =
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "6ca58ac658809760d213";
+/******/ 	var hotCurrentHash = "3d63160594409943c2c1";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -823,10 +823,573 @@ module.exports =
 /*!***************************!*\
   !*** ./build/assets.json ***!
   \***************************/
-/*! exports provided: client, , default */
+/*! exports provided: client, noentry, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"client\":{\"js\":\"http://localhost:3001/static/js/bundle.js\"},\"\":{\"json\":\"http://localhost:3001/../chunks.json\",\"svg\":\"http://localhost:3001/static/media/react.be7b83d4.svg\"}}");
+module.exports = JSON.parse("{\"client\":{\"js\":[\"http://localhost:3001/static/js/client.js\"],\"map\":[\"http://localhost:3001/static/js/client.js.map\"],\"chunks\":[\"client\"]},\"noentry\":{\"svg\":[\"http://localhost:3001/static/media/react.be7b83d4.svg\"]}}");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/api.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/api.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+// eslint-disable-next-line func-names
+module.exports = function (cssWithMappingToString) {
+  var list = []; // return the list of modules as css string
+
+  list.toString = function toString() {
+    return this.map(function (item) {
+      var content = cssWithMappingToString(item);
+
+      if (item[2]) {
+        return "@media ".concat(item[2], " {").concat(content, "}");
+      }
+
+      return content;
+    }).join('');
+  }; // import a list of modules into the list
+  // eslint-disable-next-line func-names
+
+
+  list.i = function (modules, mediaQuery, dedupe) {
+    if (typeof modules === 'string') {
+      // eslint-disable-next-line no-param-reassign
+      modules = [[null, modules, '']];
+    }
+
+    var alreadyImportedModules = {};
+
+    if (dedupe) {
+      for (var i = 0; i < this.length; i++) {
+        // eslint-disable-next-line prefer-destructuring
+        var id = this[i][0];
+
+        if (id != null) {
+          alreadyImportedModules[id] = true;
+        }
+      }
+    }
+
+    for (var _i = 0; _i < modules.length; _i++) {
+      var item = [].concat(modules[_i]);
+
+      if (dedupe && alreadyImportedModules[item[0]]) {
+        // eslint-disable-next-line no-continue
+        continue;
+      }
+
+      if (mediaQuery) {
+        if (!item[2]) {
+          item[2] = mediaQuery;
+        } else {
+          item[2] = "".concat(mediaQuery, " and ").concat(item[2]);
+        }
+      }
+
+      list.push(item);
+    }
+  };
+
+  return list;
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/cssWithMappingToString.js ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+module.exports = function cssWithMappingToString(item) {
+  var _item = _slicedToArray(item, 4),
+      content = _item[1],
+      cssMapping = _item[3];
+
+  if (typeof btoa === 'function') {
+    // eslint-disable-next-line no-undef
+    var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(cssMapping))));
+    var data = "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(base64);
+    var sourceMapping = "/*# ".concat(data, " */");
+    var sourceURLs = cssMapping.sources.map(function (source) {
+      return "/*# sourceURL=".concat(cssMapping.sourceRoot || '').concat(source, " */");
+    });
+    return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+  }
+
+  return [content].join('\n');
+};
+
+/***/ }),
+
+/***/ "./node_modules/razzle-dev-utils/node_modules/jest-message-util/build/index.js":
+/*!*************************************************************************************!*\
+  !*** ./node_modules/razzle-dev-utils/node_modules/jest-message-util/build/index.js ***!
+  \*************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports.separateMessageFromStack = exports.formatResultsErrors = exports.formatStackTrace = exports.getTopFrame = exports.getStackTraceLines = exports.formatExecError = void 0;
+
+var path = _interopRequireWildcard(__webpack_require__(/*! path */ "path"));
+
+var fs = _interopRequireWildcard(__webpack_require__(/*! graceful-fs */ "graceful-fs"));
+
+var _chalk = _interopRequireDefault(__webpack_require__(/*! chalk */ "chalk"));
+
+var _micromatch = _interopRequireDefault(__webpack_require__(/*! micromatch */ "micromatch"));
+
+var _slash = _interopRequireDefault(__webpack_require__(/*! slash */ "slash"));
+
+var _codeFrame = __webpack_require__(/*! @babel/code-frame */ "@babel/code-frame");
+
+var _stackUtils = _interopRequireDefault(__webpack_require__(/*! stack-utils */ "stack-utils"));
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {default: obj};
+}
+
+function _getRequireWildcardCache() {
+  if (typeof WeakMap !== 'function') return null;
+  var cache = new WeakMap();
+  _getRequireWildcardCache = function () {
+    return cache;
+  };
+  return cache;
+}
+
+function _interopRequireWildcard(obj) {
+  if (obj && obj.__esModule) {
+    return obj;
+  }
+  if (obj === null || (typeof obj !== 'object' && typeof obj !== 'function')) {
+    return {default: obj};
+  }
+  var cache = _getRequireWildcardCache();
+  if (cache && cache.has(obj)) {
+    return cache.get(obj);
+  }
+  var newObj = {};
+  var hasPropertyDescriptor =
+    Object.defineProperty && Object.getOwnPropertyDescriptor;
+  for (var key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+      var desc = hasPropertyDescriptor
+        ? Object.getOwnPropertyDescriptor(obj, key)
+        : null;
+      if (desc && (desc.get || desc.set)) {
+        Object.defineProperty(newObj, key, desc);
+      } else {
+        newObj[key] = obj[key];
+      }
+    }
+  }
+  newObj.default = obj;
+  if (cache) {
+    cache.set(obj, newObj);
+  }
+  return newObj;
+}
+
+var Symbol = global['jest-symbol-do-not-touch'] || global.Symbol;
+var Symbol = global['jest-symbol-do-not-touch'] || global.Symbol;
+var jestReadFile =
+  global[Symbol.for('jest-native-read-file')] || fs.readFileSync;
+// stack utils tries to create pretty stack by making paths relative.
+const stackUtils = new _stackUtils.default({
+  cwd: 'something which does not exist'
+});
+let nodeInternals = [];
+
+try {
+  nodeInternals = _stackUtils.default.nodeInternals();
+} catch {
+  // `StackUtils.nodeInternals()` fails in browsers. We don't need to remove
+  // node internals in the browser though, so no issue.
+}
+
+const PATH_NODE_MODULES = `${path.sep}node_modules${path.sep}`;
+const PATH_JEST_PACKAGES = `${path.sep}jest${path.sep}packages${path.sep}`; // filter for noisy stack trace lines
+
+const JASMINE_IGNORE = /^\s+at(?:(?:.jasmine\-)|\s+jasmine\.buildExpectationResult)/;
+const JEST_INTERNALS_IGNORE = /^\s+at.*?jest(-.*?)?(\/|\\)(build|node_modules|packages)(\/|\\)/;
+const ANONYMOUS_FN_IGNORE = /^\s+at <anonymous>.*$/;
+const ANONYMOUS_PROMISE_IGNORE = /^\s+at (new )?Promise \(<anonymous>\).*$/;
+const ANONYMOUS_GENERATOR_IGNORE = /^\s+at Generator.next \(<anonymous>\).*$/;
+const NATIVE_NEXT_IGNORE = /^\s+at next \(native\).*$/;
+const TITLE_INDENT = '  ';
+const MESSAGE_INDENT = '    ';
+const STACK_INDENT = '      ';
+const ANCESTRY_SEPARATOR = ' \u203A ';
+
+const TITLE_BULLET = _chalk.default.bold('\u25cf ');
+
+const STACK_TRACE_COLOR = _chalk.default.dim;
+const STACK_PATH_REGEXP = /\s*at.*\(?(\:\d*\:\d*|native)\)?/;
+const EXEC_ERROR_MESSAGE = 'Test suite failed to run';
+const NOT_EMPTY_LINE_REGEXP = /^(?!$)/gm;
+
+const indentAllLines = (lines, indent) =>
+  lines.replace(NOT_EMPTY_LINE_REGEXP, indent);
+
+const trim = string => (string || '').trim(); // Some errors contain not only line numbers in stack traces
+// e.g. SyntaxErrors can contain snippets of code, and we don't
+// want to trim those, because they may have pointers to the column/character
+// which will get misaligned.
+
+const trimPaths = string =>
+  string.match(STACK_PATH_REGEXP) ? trim(string) : string;
+
+const getRenderedCallsite = (fileContent, line, column) => {
+  let renderedCallsite = (0, _codeFrame.codeFrameColumns)(
+    fileContent,
+    {
+      start: {
+        column,
+        line
+      }
+    },
+    {
+      highlightCode: true
+    }
+  );
+  renderedCallsite = indentAllLines(renderedCallsite, MESSAGE_INDENT);
+  renderedCallsite = `\n${renderedCallsite}\n`;
+  return renderedCallsite;
+};
+
+const blankStringRegexp = /^\s*$/;
+
+function checkForCommonEnvironmentErrors(error) {
+  if (
+    error.includes('ReferenceError: document is not defined') ||
+    error.includes('ReferenceError: window is not defined') ||
+    error.includes('ReferenceError: navigator is not defined')
+  ) {
+    return warnAboutWrongTestEnvironment(error, 'jsdom');
+  } else if (error.includes('.unref is not a function')) {
+    return warnAboutWrongTestEnvironment(error, 'node');
+  }
+
+  return error;
+}
+
+function warnAboutWrongTestEnvironment(error, env) {
+  return (
+    _chalk.default.bold.red(
+      `The error below may be caused by using the wrong test environment, see ${_chalk.default.dim.underline(
+        'https://jestjs.io/docs/en/configuration#testenvironment-string'
+      )}.\nConsider using the "${env}" test environment.\n\n`
+    ) + error
+  );
+} // ExecError is an error thrown outside of the test suite (not inside an `it` or
+// `before/after each` hooks). If it's thrown, none of the tests in the file
+// are executed.
+
+const formatExecError = (error, config, options, testPath, reuseMessage) => {
+  if (!error || typeof error === 'number') {
+    error = new Error(`Expected an Error, but "${String(error)}" was thrown`);
+    error.stack = '';
+  }
+
+  let message, stack;
+
+  if (typeof error === 'string' || !error) {
+    error || (error = 'EMPTY ERROR');
+    message = '';
+    stack = error;
+  } else {
+    message = error.message;
+    stack = error.stack;
+  }
+
+  const separated = separateMessageFromStack(stack || '');
+  stack = separated.stack;
+
+  if (separated.message.includes(trim(message))) {
+    // Often stack trace already contains the duplicate of the message
+    message = separated.message;
+  }
+
+  message = checkForCommonEnvironmentErrors(message);
+  message = indentAllLines(message, MESSAGE_INDENT);
+  stack =
+    stack && !options.noStackTrace
+      ? '\n' + formatStackTrace(stack, config, options, testPath)
+      : '';
+
+  if (blankStringRegexp.test(message) && blankStringRegexp.test(stack)) {
+    // this can happen if an empty object is thrown.
+    message = MESSAGE_INDENT + 'Error: No message was provided';
+  }
+
+  let messageToUse;
+
+  if (reuseMessage) {
+    messageToUse = ` ${message.trim()}`;
+  } else {
+    messageToUse = `${EXEC_ERROR_MESSAGE}\n\n${message}`;
+  }
+
+  return TITLE_INDENT + TITLE_BULLET + messageToUse + stack + '\n';
+};
+
+exports.formatExecError = formatExecError;
+
+const removeInternalStackEntries = (lines, options) => {
+  let pathCounter = 0;
+  return lines.filter(line => {
+    if (ANONYMOUS_FN_IGNORE.test(line)) {
+      return false;
+    }
+
+    if (ANONYMOUS_PROMISE_IGNORE.test(line)) {
+      return false;
+    }
+
+    if (ANONYMOUS_GENERATOR_IGNORE.test(line)) {
+      return false;
+    }
+
+    if (NATIVE_NEXT_IGNORE.test(line)) {
+      return false;
+    }
+
+    if (nodeInternals.some(internal => internal.test(line))) {
+      return false;
+    }
+
+    if (!STACK_PATH_REGEXP.test(line)) {
+      return true;
+    }
+
+    if (JASMINE_IGNORE.test(line)) {
+      return false;
+    }
+
+    if (++pathCounter === 1) {
+      return true; // always keep the first line even if it's from Jest
+    }
+
+    if (options.noStackTrace) {
+      return false;
+    }
+
+    if (JEST_INTERNALS_IGNORE.test(line)) {
+      return false;
+    }
+
+    return true;
+  });
+};
+
+const formatPaths = (config, relativeTestPath, line) => {
+  // Extract the file path from the trace line.
+  const match = line.match(/(^\s*at .*?\(?)([^()]+)(:[0-9]+:[0-9]+\)?.*$)/);
+
+  if (!match) {
+    return line;
+  }
+
+  let filePath = (0, _slash.default)(path.relative(config.rootDir, match[2])); // highlight paths from the current test file
+
+  if (
+    (config.testMatch &&
+      config.testMatch.length &&
+      (0, _micromatch.default)([filePath], config.testMatch).length > 0) ||
+    filePath === relativeTestPath
+  ) {
+    filePath = _chalk.default.reset.cyan(filePath);
+  }
+
+  return STACK_TRACE_COLOR(match[1]) + filePath + STACK_TRACE_COLOR(match[3]);
+};
+
+const getStackTraceLines = (
+  stack,
+  options = {
+    noCodeFrame: false,
+    noStackTrace: false
+  }
+) => removeInternalStackEntries(stack.split(/\n/), options);
+
+exports.getStackTraceLines = getStackTraceLines;
+
+const getTopFrame = lines => {
+  for (const line of lines) {
+    if (line.includes(PATH_NODE_MODULES) || line.includes(PATH_JEST_PACKAGES)) {
+      continue;
+    }
+
+    const parsedFrame = stackUtils.parseLine(line.trim());
+
+    if (parsedFrame && parsedFrame.file) {
+      return parsedFrame;
+    }
+  }
+
+  return null;
+};
+
+exports.getTopFrame = getTopFrame;
+
+const formatStackTrace = (stack, config, options, testPath) => {
+  const lines = getStackTraceLines(stack, options);
+  let renderedCallsite = '';
+  const relativeTestPath = testPath
+    ? (0, _slash.default)(path.relative(config.rootDir, testPath))
+    : null;
+
+  if (!options.noStackTrace && !options.noCodeFrame) {
+    const topFrame = getTopFrame(lines);
+
+    if (topFrame) {
+      const {column, file: filename, line} = topFrame;
+
+      if (line && filename && path.isAbsolute(filename)) {
+        let fileContent;
+
+        try {
+          // TODO: check & read HasteFS instead of reading the filesystem:
+          // see: https://github.com/facebook/jest/pull/5405#discussion_r164281696
+          fileContent = jestReadFile(filename, 'utf8');
+          renderedCallsite = getRenderedCallsite(fileContent, line, column);
+        } catch {
+          // the file does not exist or is inaccessible, we ignore
+        }
+      }
+    }
+  }
+
+  const stacktrace = lines
+    .filter(Boolean)
+    .map(
+      line =>
+        STACK_INDENT + formatPaths(config, relativeTestPath, trimPaths(line))
+    )
+    .join('\n');
+  return renderedCallsite
+    ? `${renderedCallsite}\n${stacktrace}`
+    : `\n${stacktrace}`;
+};
+
+exports.formatStackTrace = formatStackTrace;
+
+const formatResultsErrors = (testResults, config, options, testPath) => {
+  const failedResults = testResults.reduce((errors, result) => {
+    result.failureMessages
+      .map(checkForCommonEnvironmentErrors)
+      .forEach(content =>
+        errors.push({
+          content,
+          result
+        })
+      );
+    return errors;
+  }, []);
+
+  if (!failedResults.length) {
+    return null;
+  }
+
+  return failedResults
+    .map(({result, content}) => {
+      let {message, stack} = separateMessageFromStack(content);
+      stack = options.noStackTrace
+        ? ''
+        : STACK_TRACE_COLOR(
+            formatStackTrace(stack, config, options, testPath)
+          ) + '\n';
+      message = indentAllLines(message, MESSAGE_INDENT);
+      const title =
+        _chalk.default.bold.red(
+          TITLE_INDENT +
+            TITLE_BULLET +
+            result.ancestorTitles.join(ANCESTRY_SEPARATOR) +
+            (result.ancestorTitles.length ? ANCESTRY_SEPARATOR : '') +
+            result.title
+        ) + '\n';
+      return title + '\n' + message + '\n' + stack;
+    })
+    .join('\n');
+};
+
+exports.formatResultsErrors = formatResultsErrors;
+const errorRegexp = /^Error:?\s*$/;
+
+const removeBlankErrorLine = str =>
+  str
+    .split('\n') // Lines saying just `Error:` are useless
+    .filter(line => !errorRegexp.test(line))
+    .join('\n')
+    .trimRight(); // jasmine and worker farm sometimes don't give us access to the actual
+// Error object, so we have to regexp out the message from the stack string
+// to format it.
+
+const separateMessageFromStack = content => {
+  if (!content) {
+    return {
+      message: '',
+      stack: ''
+    };
+  } // All lines up to what looks like a stack -- or if nothing looks like a stack
+  // (maybe it's a code frame instead), just the first non-empty line.
+  // If the error is a plain "Error:" instead of a SyntaxError or TypeError we
+  // remove the prefix from the message because it is generally not useful.
+
+  const messageMatch = content.match(
+    /^(?:Error: )?([\s\S]*?(?=\n\s*at\s.*:\d*:\d*)|\s*.*)([\s\S]*)$/
+  );
+
+  if (!messageMatch) {
+    // For typescript
+    throw new Error('If you hit this error, the regex above is buggy.');
+  }
+
+  const message = removeBlankErrorLine(messageMatch[1]);
+  const stack = removeBlankErrorLine(messageMatch[2]);
+  return {
+    message,
+    stack
+  };
+};
+
+exports.separateMessageFromStack = separateMessageFromStack;
+
 
 /***/ }),
 
@@ -842,7 +1405,7 @@ const {
   getTopFrame,
   getStackTraceLines,
   separateMessageFromStack,
-} = __webpack_require__(/*! jest-message-util */ "jest-message-util");
+} = __webpack_require__(/*! jest-message-util */ "./node_modules/razzle-dev-utils/node_modules/jest-message-util/build/index.js");
 const { codeFrameColumns } = __webpack_require__(/*! @babel/code-frame */ "@babel/code-frame");
 
 function pretty(error) {
@@ -889,6 +1452,78 @@ const stackTransform = ({ stack = '', ...rest }) => ({
 
 usePrettyErrors(stackTransform);
 
+
+/***/ }),
+
+/***/ "./node_modules/razzle-start-server-webpack-plugin/dist/monitor-loader.js!./node_modules/razzle-start-server-webpack-plugin/dist/monitor-loader.js":
+/*!*********************************************************************************************************************************************************!*\
+  !*** ./node_modules/razzle-start-server-webpack-plugin/dist/monitor-loader.js!./node_modules/razzle-start-server-webpack-plugin/dist/monitor-loader.js ***!
+  \*********************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+(() => {
+  // Handle hot updates, copied with slight adjustments from webpack/hot/signal.js
+  if (true) {
+    const log = (type, msg) => console[type](`sswp> ${msg}`); // TODO don't show this when sending signal instead of message
+
+
+    log('log', 'Handling Hot Module Reloading');
+
+    var checkForUpdate = function checkForUpdate(fromUpdate) {
+      module.hot.check().then(function (updatedModules) {
+        if (!updatedModules) {
+          if (fromUpdate) log('log', 'Update applied.');else log('warn', 'Cannot find update.');
+          return;
+        }
+
+        return module.hot.apply({
+          ignoreUnaccepted: true,
+          // TODO probably restart
+          onUnaccepted: function (data) {
+            log('warn', '\u0007Ignored an update to unaccepted module ' + data.chain.join(' -> '));
+          }
+        }).then(function (renewedModules) {
+          __webpack_require__(/*! webpack/hot/log-apply-result */ "webpack/hot/log-apply-result")(updatedModules, renewedModules);
+
+          checkForUpdate(true);
+        });
+      }).catch(function (err) {
+        var status = module.hot.status();
+
+        if (['abort', 'fail'].indexOf(status) >= 0) {
+          if (process.send) {
+            process.send('SSWP_HMR_FAIL');
+          }
+
+          log('warn', 'Cannot apply update.');
+          log('warn', '' + err.stack || err.message);
+          log('error', 'Quitting process - will reload on next file change\u0007\n\u0007\n\u0007');
+          process.exit(222);
+        } else {
+          log('warn', 'Update failed: ' + err.stack || false);
+        }
+      });
+    };
+
+    process.on('message', function (message) {
+      if (message !== 'SSWP_HMR') return;
+
+      if (module.hot.status() !== 'idle') {
+        log('warn', 'Got signal but currently in ' + module.hot.status() + ' state.');
+        log('warn', 'Need to be in idle state to start hot update.');
+        return;
+      }
+
+      checkForUpdate();
+    });
+  } // Tell our plugin we loaded all the code without initially crashing
+
+
+  if (process.send) {
+    process.send('SSWP_LOADED');
+  }
+})()
 
 /***/ }),
 
@@ -1068,11 +1703,23 @@ if (true) {
 /*!*********************!*\
   !*** ./src/App.css ***!
   \*********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
+// Module
+___CSS_LOADER_EXPORT___.push([module.i, "body {\n  margin: 0;\n  padding: 0;\n  font-family: sans-serif;\n}", "",{"version":3,"sources":["webpack://src/App.css"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,UAAU;EACV,uBAAuB;AACzB","sourcesContent":["body {\n  margin: 0;\n  padding: 0;\n  font-family: sans-serif;\n}"],"sourceRoot":""}]);
 // Exports
-module.exports = {};
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
@@ -1092,31 +1739,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_router_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Home */ "./src/Home.js");
 /* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./App.css */ "./src/App.css");
-/* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_App_css__WEBPACK_IMPORTED_MODULE_3__);
 var _jsxFileName = "/Users/davidg/Desktop/code/chapter1/razzle-cypress/app/src/App.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
 
 
-var App = function App() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7,
-      columnNumber: 3
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-    exact: true,
-    path: "/",
-    component: _Home__WEBPACK_IMPORTED_MODULE_2__["default"],
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8,
-      columnNumber: 5
-    }
-  }));
-};
+const App = () => __jsx(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], {
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 7,
+    columnNumber: 3
+  }
+}, __jsx(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+  exact: true,
+  path: "/",
+  component: _Home__WEBPACK_IMPORTED_MODULE_2__["default"],
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 8,
+    columnNumber: 5
+  }
+}));
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
 
@@ -1126,11 +1773,23 @@ var App = function App() {
 /*!**********************!*\
   !*** ./src/Home.css ***!
   \**********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
+// Module
+___CSS_LOADER_EXPORT___.push([module.i, ".Home {\n  text-align: center;\n}\n\n.Home-logo {\n  animation: Home-logo-spin infinite 20s linear;\n  height: 80px;\n}\n\n.Home-header {\n  background-color: #222;\n  height: 150px;\n  padding: 20px;\n  color: white;\n}\n\n.Home-intro {\n  font-size: large;\n}\n\n.Home-resources {\n  list-style: none;\n}\n\n.Home-resources > li {\n  display: inline-block;\n  padding: 1rem;\n}\n\n@keyframes Home-logo-spin {\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n}\n", "",{"version":3,"sources":["webpack://src/Home.css"],"names":[],"mappings":"AAAA;EACE,kBAAkB;AACpB;;AAEA;EACE,6CAA6C;EAC7C,YAAY;AACd;;AAEA;EACE,sBAAsB;EACtB,aAAa;EACb,aAAa;EACb,YAAY;AACd;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,qBAAqB;EACrB,aAAa;AACf;;AAEA;EACE;IACE,uBAAuB;EACzB;EACA;IACE,yBAAyB;EAC3B;AACF","sourcesContent":[".Home {\n  text-align: center;\n}\n\n.Home-logo {\n  animation: Home-logo-spin infinite 20s linear;\n  height: 80px;\n}\n\n.Home-header {\n  background-color: #222;\n  height: 150px;\n  padding: 20px;\n  color: white;\n}\n\n.Home-intro {\n  font-size: large;\n}\n\n.Home-resources {\n  list-style: none;\n}\n\n.Home-resources > li {\n  display: inline-block;\n  padding: 1rem;\n}\n\n@keyframes Home-logo-spin {\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
-module.exports = {};
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
@@ -1144,151 +1803,131 @@ module.exports = {};
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "@babel/runtime/helpers/classCallCheck");
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "@babel/runtime/helpers/createClass");
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "@babel/runtime/helpers/inherits");
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "@babel/runtime/helpers/possibleConstructorReturn");
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "@babel/runtime/helpers/getPrototypeOf");
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _react_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./react.svg */ "./src/react.svg");
-/* harmony import */ var _react_svg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_react_svg__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _Home_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Home.css */ "./src/Home.css");
-/* harmony import */ var _Home_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_Home_css__WEBPACK_IMPORTED_MODULE_7__);
-
-
-
-
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _react_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./react.svg */ "./src/react.svg");
+/* harmony import */ var _react_svg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_react_svg__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Home_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Home.css */ "./src/Home.css");
 var _jsxFileName = "/Users/davidg/Desktop/code/chapter1/razzle-cypress/app/src/Home.js";
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default()(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
 
-
-var Home = /*#__PURE__*/function (_React$Component) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2___default()(Home, _React$Component);
-
-  var _super = _createSuper(Home);
-
-  function Home() {
-    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Home);
-
-    return _super.apply(this, arguments);
+class Home extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  render() {
+    return __jsx("div", {
+      className: "Home",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8,
+        columnNumber: 7
+      }
+    }, __jsx("div", {
+      className: "Home-header",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9,
+        columnNumber: 9
+      }
+    }, __jsx("img", {
+      src: _react_svg__WEBPACK_IMPORTED_MODULE_1___default.a,
+      className: "Home-logo",
+      alt: "logo",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10,
+        columnNumber: 11
+      }
+    }), __jsx("h2", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11,
+        columnNumber: 11
+      }
+    }, "Welcome to Razzle")), __jsx("p", {
+      className: "Home-intro",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13,
+        columnNumber: 9
+      }
+    }, "To get started, edit ", __jsx("code", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14,
+        columnNumber: 32
+      }
+    }, "src/App.js"), " or", ' ', __jsx("code", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15,
+        columnNumber: 11
+      }
+    }, "src/Home.js"), " and save to reload."), __jsx("ul", {
+      className: "Home-resources",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17,
+        columnNumber: 9
+      }
+    }, __jsx("li", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 18,
+        columnNumber: 11
+      }
+    }, __jsx("a", {
+      href: "https://github.com/jaredpalmer/razzle",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 19,
+        columnNumber: 13
+      }
+    }, "Docs")), __jsx("li", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21,
+        columnNumber: 11
+      }
+    }, __jsx("a", {
+      href: "https://github.com/jaredpalmer/razzle/issues",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22,
+        columnNumber: 13
+      }
+    }, "Issues")), __jsx("li", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 24,
+        columnNumber: 11
+      }
+    }, __jsx("a", {
+      href: "https://palmer.chat",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 25,
+        columnNumber: 13
+      }
+    }, "Community Slack"))));
   }
 
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Home, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "Home",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 8,
-          columnNumber: 7
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "Home-header",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 9,
-          columnNumber: 9
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
-        src: _react_svg__WEBPACK_IMPORTED_MODULE_6___default.a,
-        className: "Home-logo",
-        alt: "logo",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 10,
-          columnNumber: 11
-        }
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h2", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 11,
-          columnNumber: 11
-        }
-      }, "Welcome to Razzle")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
-        className: "Home-intro",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 13,
-          columnNumber: 9
-        }
-      }, "To get started, edit ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("code", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 14,
-          columnNumber: 32
-        }
-      }, "src/App.js"), " or", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("code", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 15,
-          columnNumber: 11
-        }
-      }, "src/Home.js"), " and save to reload."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("ul", {
-        className: "Home-resources",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 17,
-          columnNumber: 9
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 18,
-          columnNumber: 11
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
-        href: "https://github.com/jaredpalmer/razzle",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 19,
-          columnNumber: 13
-        }
-      }, "Docs")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 21,
-          columnNumber: 11
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
-        href: "https://github.com/jaredpalmer/razzle/issues",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 22,
-          columnNumber: 13
-        }
-      }, "Issues")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 24,
-          columnNumber: 11
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
-        href: "https://palmer.chat",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 25,
-          columnNumber: 13
-        }
-      }, "Community Slack"))));
-    }
-  }]);
-
-  return Home;
-}(react__WEBPACK_IMPORTED_MODULE_5___default.a.Component);
+}
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
 
@@ -1307,14 +1946,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);
 
 
-var app = __webpack_require__(/*! ./server */ "./src/server.js")["default"];
+let app = __webpack_require__(/*! ./server */ "./src/server.js").default;
 
 if (true) {
   module.hot.accept(/*! ./server */ "./src/server.js", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { (function () {
     console.log('🔁  HMR Reloading `./server`...');
 
     try {
-      app = __webpack_require__(/*! ./server */ "./src/server.js")["default"];
+      app = __webpack_require__(/*! ./server */ "./src/server.js").default;
     } catch (error) {
       console.error(error);
     }
@@ -1322,16 +1961,14 @@ if (true) {
   console.info('✅  Server-side HMR Enabled!');
 }
 
-var port = "3000" || false;
-/* harmony default export */ __webpack_exports__["default"] = (express__WEBPACK_IMPORTED_MODULE_0___default()().use(function (req, res) {
-  return app.handle(req, res);
-}).listen(port, function (err) {
+const port = "3000" || false;
+/* harmony default export */ __webpack_exports__["default"] = (express__WEBPACK_IMPORTED_MODULE_0___default()().use((req, res) => app.handle(req, res)).listen(port, function (err) {
   if (err) {
     console.error(err);
     return;
   }
 
-  console.log("> Started on port ".concat(port));
+  console.log(`> Started on port ${port}`);
 }));
 
 /***/ }),
@@ -1366,29 +2003,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom_server__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-dom/server */ "react-dom/server");
 /* harmony import */ var react_dom_server__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_dom_server__WEBPACK_IMPORTED_MODULE_4__);
 var _jsxFileName = "/Users/davidg/Desktop/code/chapter1/razzle-cypress/app/src/server.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
 
 
 
-var assets = __webpack_require__(/*! ./build/assets.json */ "./build/assets.json");
+const assets = __webpack_require__(/*! ./build/assets.json */ "./build/assets.json");
 
-var server = express__WEBPACK_IMPORTED_MODULE_3___default()();
-server.disable('x-powered-by').use(express__WEBPACK_IMPORTED_MODULE_3___default.a["static"]("/Users/davidg/Desktop/code/chapter1/razzle-cypress/app/public")).get('/*', function (req, res) {
-  var context = {};
-  var markup = Object(react_dom_server__WEBPACK_IMPORTED_MODULE_4__["renderToString"])( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["StaticRouter"], {
+const cssLinksFromAssets = (assets, entrypoint) => {
+  return assets[entrypoint] ? assets[entrypoint].css ? assets[entrypoint].css.map(asset => `<link rel="stylesheet" href="${asset}">`).join('') : '' : '';
+};
+
+const jsScriptTagsFromAssets = (assets, entrypoint, extra = '') => {
+  return assets[entrypoint] ? assets[entrypoint].js ? assets[entrypoint].js.map(asset => `<script src="${asset}"${extra}></script>`).join('') : '' : '';
+};
+
+const server = express__WEBPACK_IMPORTED_MODULE_3___default()();
+server.disable('x-powered-by').use(express__WEBPACK_IMPORTED_MODULE_3___default.a.static("/Users/davidg/Desktop/code/chapter1/razzle-cypress/app/public")).get('/*', (req, res) => {
+  const context = {};
+  const markup = Object(react_dom_server__WEBPACK_IMPORTED_MODULE_4__["renderToString"])(__jsx(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["StaticRouter"], {
     context: context,
     location: req.url,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
+      lineNumber: 30,
       columnNumber: 7
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_App__WEBPACK_IMPORTED_MODULE_0__["default"], {
+  }, __jsx(_App__WEBPACK_IMPORTED_MODULE_0__["default"], {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
+      lineNumber: 31,
       columnNumber: 9
     }
   })));
@@ -1396,7 +2044,20 @@ server.disable('x-powered-by').use(express__WEBPACK_IMPORTED_MODULE_3___default.
   if (context.url) {
     res.redirect(context.url);
   } else {
-    res.status(200).send("<!doctype html>\n    <html lang=\"\">\n    <head>\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\n        <meta charset=\"utf-8\" />\n        <title>Welcome to Razzle</title>\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n        ".concat(assets.client.css ? "<link rel=\"stylesheet\" href=\"".concat(assets.client.css, "\">") : '', "\n        ").concat( false ? undefined : "<script src=\"".concat(assets.client.js, "\" defer crossorigin></script>"), "\n    </head>\n    <body>\n        <div id=\"root\">").concat(markup, "</div>\n    </body>\n</html>"));
+    res.status(200).send(`<!doctype html>
+    <html lang="">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta charset="utf-8" />
+        <title>Welcome to Razzle</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        ${cssLinksFromAssets(assets, 'client')}
+    </head>
+    <body>
+        <div id="root">${markup}</div>
+        ${jsScriptTagsFromAssets(assets, 'client', ' defer crossorigin')}
+    </body>
+</html>`);
   }
 });
 /* harmony default export */ __webpack_exports__["default"] = (server);
@@ -1404,15 +2065,16 @@ server.disable('x-powered-by').use(express__WEBPACK_IMPORTED_MODULE_3___default.
 /***/ }),
 
 /***/ 0:
-/*!*************************************************************************************************!*\
-  !*** multi ./node_modules/razzle-dev-utils/prettyNodeErrors.js (webpack)/hot/poll.js?300 ./src ***!
-  \*************************************************************************************************/
+/*!****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./node_modules/razzle-dev-utils/prettyNodeErrors.js (webpack)/hot/poll.js?300 ./src !./node_modules/razzle-start-server-webpack-plugin/dist/monitor-loader.js!./node_modules/razzle-start-server-webpack-plugin/dist/monitor-loader.js ***!
+  \****************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Users/davidg/Desktop/code/chapter1/razzle-cypress/app/node_modules/razzle-dev-utils/prettyNodeErrors.js */"./node_modules/razzle-dev-utils/prettyNodeErrors.js");
 __webpack_require__(/*! /Users/davidg/Desktop/code/chapter1/razzle-cypress/app/node_modules/webpack/hot/poll.js?300 */"./node_modules/webpack/hot/poll.js?300");
-module.exports = __webpack_require__(/*! /Users/davidg/Desktop/code/chapter1/razzle-cypress/app/src */"./src/index.js");
+__webpack_require__(/*! /Users/davidg/Desktop/code/chapter1/razzle-cypress/app/src */"./src/index.js");
+module.exports = __webpack_require__(/*! !!/Users/davidg/Desktop/code/chapter1/razzle-cypress/app/node_modules/razzle-start-server-webpack-plugin/dist/monitor-loader.js!/Users/davidg/Desktop/code/chapter1/razzle-cypress/app/node_modules/razzle-start-server-webpack-plugin/dist/monitor-loader.js */"./node_modules/razzle-start-server-webpack-plugin/dist/monitor-loader.js!./node_modules/razzle-start-server-webpack-plugin/dist/monitor-loader.js");
 
 
 /***/ }),
@@ -1428,58 +2090,14 @@ module.exports = require("@babel/code-frame");
 
 /***/ }),
 
-/***/ "@babel/runtime/helpers/classCallCheck":
-/*!********************************************************!*\
-  !*** external "@babel/runtime/helpers/classCallCheck" ***!
-  \********************************************************/
+/***/ "chalk":
+/*!************************!*\
+  !*** external "chalk" ***!
+  \************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("@babel/runtime/helpers/classCallCheck");
-
-/***/ }),
-
-/***/ "@babel/runtime/helpers/createClass":
-/*!*****************************************************!*\
-  !*** external "@babel/runtime/helpers/createClass" ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("@babel/runtime/helpers/createClass");
-
-/***/ }),
-
-/***/ "@babel/runtime/helpers/getPrototypeOf":
-/*!********************************************************!*\
-  !*** external "@babel/runtime/helpers/getPrototypeOf" ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("@babel/runtime/helpers/getPrototypeOf");
-
-/***/ }),
-
-/***/ "@babel/runtime/helpers/inherits":
-/*!**************************************************!*\
-  !*** external "@babel/runtime/helpers/inherits" ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("@babel/runtime/helpers/inherits");
-
-/***/ }),
-
-/***/ "@babel/runtime/helpers/possibleConstructorReturn":
-/*!*******************************************************************!*\
-  !*** external "@babel/runtime/helpers/possibleConstructorReturn" ***!
-  \*******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("@babel/runtime/helpers/possibleConstructorReturn");
+module.exports = require("chalk");
 
 /***/ }),
 
@@ -1505,14 +2123,36 @@ module.exports = require("fs");
 
 /***/ }),
 
-/***/ "jest-message-util":
-/*!************************************!*\
-  !*** external "jest-message-util" ***!
-  \************************************/
+/***/ "graceful-fs":
+/*!******************************!*\
+  !*** external "graceful-fs" ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("jest-message-util");
+module.exports = require("graceful-fs");
+
+/***/ }),
+
+/***/ "micromatch":
+/*!*****************************!*\
+  !*** external "micromatch" ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("micromatch");
+
+/***/ }),
+
+/***/ "path":
+/*!***********************!*\
+  !*** external "path" ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("path");
 
 /***/ }),
 
@@ -1546,6 +2186,39 @@ module.exports = require("react-dom/server");
 /***/ (function(module, exports) {
 
 module.exports = require("react-router-dom");
+
+/***/ }),
+
+/***/ "slash":
+/*!************************!*\
+  !*** external "slash" ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("slash");
+
+/***/ }),
+
+/***/ "stack-utils":
+/*!******************************!*\
+  !*** external "stack-utils" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("stack-utils");
+
+/***/ }),
+
+/***/ "webpack/hot/log-apply-result":
+/*!***********************************************!*\
+  !*** external "webpack/hot/log-apply-result" ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("webpack/hot/log-apply-result");
 
 /***/ })
 

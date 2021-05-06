@@ -4,7 +4,7 @@ import Offices from "./Offices";
 
 import "./About.css";
 
-export default () => {
+const OldAbout = () => {
     const [tabId, setTabId] = useState("people")
 
     return <div className='About'>
@@ -24,3 +24,5 @@ export default () => {
         {tabId === "offices" && <Offices/>}
     </div>;
 }
+
+export default OldAbout;
