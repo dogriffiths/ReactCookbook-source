@@ -2,7 +2,7 @@ import {useCallback, useState} from "react";
 import ErrorHandlerProvider from "./ErrorHandlerProvider";
 import ErrorDialog from "./ErrorDialog";
 
-export default (props) => {
+const ErrorContainer = (props) => {
     const [error, setError] = useState();
     const [errorTitle, setErrorTitle] = useState();
     const [action, setAction] = useState();
@@ -43,3 +43,5 @@ export default (props) => {
         </ErrorHandlerProvider>
     );
 };
+
+export default ErrorContainer;

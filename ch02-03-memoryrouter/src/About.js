@@ -3,7 +3,7 @@ import "./About.css";
 import People from "./People";
 import Offices from "./Offices";
 
-export default () =>
+const About = () =>
     <div className='About'>
         <div className='About-tabs'>
             <NavLink to="/about/people"
@@ -27,3 +27,5 @@ export default () =>
             <Redirect to='/about/people'/>
         </Switch>
     </div>;
+
+export default About;

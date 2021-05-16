@@ -1,4 +1,4 @@
-let reducer = (state, action) => {
+const reducer = (state, action) => {
     if (action.type === 'SEARCH_RESULTS') {
         return {
             ...state,
@@ -7,4 +7,5 @@ let reducer = (state, action) => {
     }
     return {...state};
 };
+
 export default reducer;

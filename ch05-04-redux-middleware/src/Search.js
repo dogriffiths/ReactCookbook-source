@@ -2,7 +2,7 @@ import './App.css';
 import {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 
-let Search = () => {
+const Search = () => {
     const [terms, setTerms] = useState();
     const {data: results, error, loading}
     = useSelector(state => state.searchResults || {});

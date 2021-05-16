@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {Prompt} from "react-router-dom";
 
-export default () => {
+const Important = () => {
     let initialValue = "Initial value";
 
     const [data, setData] = useState(initialValue);
@@ -26,4 +26,6 @@ export default () => {
             message={() => "Do you really want to leave?"}
             />
     </div>;
-}
+};
+
+export default Important;

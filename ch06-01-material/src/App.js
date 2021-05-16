@@ -11,7 +11,7 @@ import CardActions from "@material-ui/core/CardActions";
 import Typography from "@material-ui/core/Typography";
 import {makeStyles} from "@material-ui/core/styles";
 import {useState} from "react";
-import {MyDialog} from "./MyDialog";
+import MyDialog from "./MyDialog";
 import ImageSearchIcon from '@material-ui/icons/ImageSearch';
 
 import gallery from "./gallery.json";

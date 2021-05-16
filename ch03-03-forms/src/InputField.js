@@ -7,18 +7,14 @@ const splitCamelCase = s => s
     .replace(/([a-z0-9])([A-Z0-9])/g, '$1 $2')
     .replace(/^([a-z])/, x => x.toUpperCase());
 
-export default (props) => {
+const InputField = (props) => {
     const form = useContext(FormContext);
-
-    if (!form.value) {
-        return "InputField should be wrapped in a form"
-    }
 
     const [error, setError] = useState('');
 
     const {onValidate, name, label, ...otherProps} = props;
 
-    let value = form.value(name);
+    let value = form.value && form.value(name);
 
     useEffect(() => {
         if (onValidate) {
@@ -29,8 +25,14 @@ export default (props) => {
     const setInvalid = form.setInvalid;
 
     useEffect(() => {
-        setInvalid(name, error);
+        if (setInvalid) {
+            setInvalid(name, error);
+        }
     }, [setInvalid, name, error]);
+
+    if (!form.value) {
+        return "InputField should be wrapped in a form"
+    }
 
     return <div className='InputField'>
         <label htmlFor={name}>
@@ -52,3 +54,5 @@ export default (props) => {
     }
     </div>;
 };
+
+export default InputField;

@@ -1,4 +1,6 @@
 import SecurityContext from "./SecurityContext";
 import {useContext} from "react";
 
-export default () => useContext(SecurityContext);
+const useSecurity = () => useContext(SecurityContext);
+
+export default useSecurity;

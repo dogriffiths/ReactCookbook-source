@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 
-export default () => {
+const useOnline = () => {
     const [online, setOnline] = useState(navigator.onLine);
 
     useEffect(() => {
@@ -14,4 +14,6 @@ export default () => {
     }, []);
 
     return online;
-}
+};
+
+export default useOnline;

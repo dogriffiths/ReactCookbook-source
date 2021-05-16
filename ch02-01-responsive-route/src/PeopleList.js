@@ -2,7 +2,7 @@ import {NavLink} from "react-router-dom";
 import people from './people';
 import './PeopleList.css';
 
-export default () => {
+const PeopleList = () => {
     return <nav className='PeopleList'>
         <ul>
             {
@@ -18,3 +18,5 @@ export default () => {
         </ul>
     </nav>;
 };
+
+export default PeopleList;

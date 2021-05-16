@@ -1,7 +1,7 @@
 import {Popper} from "@material-ui/core";
 import './HelpBubble.css';
 
-export default (props) => {
+const HelpBubble = (props) => {
     const element = props.forElement ? document.querySelector(props.forElement) : null;
 
     return element ?
@@ -33,4 +33,6 @@ export default (props) => {
             </div>
         </Popper>
         : null;
-}
+};
+
+export default HelpBubble;

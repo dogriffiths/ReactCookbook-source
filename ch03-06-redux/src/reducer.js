@@ -1,4 +1,4 @@
-export default (state = {}, action = {}) => {
+const reducer = (state = {}, action = {}) => {
     switch (action.type) {
         case 'buy': {
             const basket = state.basket ? [...state.basket] : [];
@@ -24,3 +24,5 @@ export default (state = {}, action = {}) => {
             return {...state};
     }
 };
+
+export default reducer;

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-let axiosMiddleware = store => next => action => {
+const axiosMiddleware = store => next => action => {
     if (action.type === 'SEARCH') {
         const terms = action.payload;
         if (terms) {

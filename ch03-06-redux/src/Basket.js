@@ -2,7 +2,7 @@ import {useDispatch, useSelector} from "react-redux";
 
 import "./Basket.css";
 
-export default () => {
+const Basket = () => {
     const basket = useSelector(state => state.basket);
     const dispatch = useDispatch();
 
@@ -36,3 +36,5 @@ export default () => {
         }
     </div>;
 };
+
+export default Basket;

@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
 
-export default (terms) => {
+const useSearch = (terms) => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState();
@@ -32,3 +32,5 @@ export default (terms) => {
 
     return {data, loading, error};
 };
+
+export default useSearch;

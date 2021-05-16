@@ -7,7 +7,7 @@ import DialogActions from "@material-ui/core/DialogActions";
 import Button from "@material-ui/core/Button";
 import CloseIcon from '@material-ui/icons/Close';
 
-export const ResponsiveDialog = withMobileDialog()(
+const ResponsiveDialog = withMobileDialog()(
     ({onClose, open, title, fullScreen, children}) => {
         return <Dialog
             open={open}
@@ -32,3 +32,5 @@ export const ResponsiveDialog = withMobileDialog()(
         </Dialog>;
     }
 );
+
+export default ResponsiveDialog;

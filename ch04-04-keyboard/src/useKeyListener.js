@@ -1,6 +1,6 @@
 import {useEffect} from "react";
 
-export default (callback) => {
+const useKeyListener = (callback) => {
     useEffect(() => {
         const listener = (e) => {
             e = e || window.event;
@@ -17,3 +17,5 @@ export default (callback) => {
         }
     }, [callback]);
 };
+
+export default useKeyListener;

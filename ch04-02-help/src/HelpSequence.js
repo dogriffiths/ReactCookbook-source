@@ -6,7 +6,7 @@ function isVisible(e) {
     return !!( e.offsetWidth || e.offsetHeight || e.getClientRects().length );
 }
 
-export default (props) => {
+const HelpSequence = (props) => {
     const [position, setPosition] = useState(0);
     const [sequence, setSequence] = useState();
 
@@ -62,4 +62,6 @@ export default (props) => {
             />
         }
     </div>;
-}
+};
+
+export default HelpSequence;

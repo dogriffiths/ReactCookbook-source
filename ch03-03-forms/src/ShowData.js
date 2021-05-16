@@ -1,6 +1,6 @@
 import './ShowData.css';
 
-export default ({formFields, valid, errors}) => <div className='ShowData'>
+const ShowData = ({formFields, valid, errors}) => <div className='ShowData'>
     <dl>
         <dt>
             Current value:
@@ -22,3 +22,5 @@ export default ({formFields, valid, errors}) => <div className='ShowData'>
         </dd>
     </dl>
 </div>;
+
+export default ShowData;

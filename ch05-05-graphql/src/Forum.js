@@ -24,7 +24,7 @@ const ADD_MESSAGE = gql`
     }
 `;
 
-let Forum = () => {
+const Forum = () => {
     const {loading: messagesLoading, error: messagesError, data} = useQuery(MESSAGES);
     const [addMessage] = useMutation(ADD_MESSAGE);
     const [text, setText] = useState();

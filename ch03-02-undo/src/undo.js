@@ -1,6 +1,6 @@
 import lodash from 'lodash';
 
-export default (reducer) =>
+const undo = (reducer) =>
     (state, action) => {
         let {undoHistory = [],
             undoActions = [],
@@ -46,3 +46,5 @@ export default (reducer) =>
         }
         return {...innerState, undoHistory, undoActions};
     };
+
+export default undo;

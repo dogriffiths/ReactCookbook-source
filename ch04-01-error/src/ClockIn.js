@@ -1,7 +1,7 @@
 import useErrorHandler from "./useErrorHandler";
 import axios from "axios";
 
-export default () => {
+const ClockIn = () => {
     const setVisibleError = useErrorHandler();
 
     const doClockIn = async () => {
@@ -16,4 +16,6 @@ export default () => {
         <h1>Click Button to Record Start Time</h1>
         <button onClick={doClockIn}>Start work</button>
         </>;
-}
+};
+
+export default ClockIn;

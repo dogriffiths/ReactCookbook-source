@@ -3,7 +3,7 @@ import reducer from "./reducer";
 
 import "./Puzzle.css";
 
-export default () => {
+const Puzzle = () => {
     const [state, dispatch] = useReducer(reducer, {
         items: ['4', '1', '2', '7', '6', '3', null, '5', '8']
     });
@@ -30,3 +30,5 @@ export default () => {
         }
     </div>;
 };
+
+export default Puzzle;

@@ -6,7 +6,7 @@ import {CSSTransition, TransitionGroup} from "react-transition-group";
 import "./About.css";
 import "./fade.css";
 
-export default () => {
+const About = () => {
     const location = useLocation();
 
     return <div className='About'>
@@ -40,4 +40,6 @@ export default () => {
             </CSSTransition>
         </TransitionGroup>
     </div>;
-}
+};
+
+export default About;

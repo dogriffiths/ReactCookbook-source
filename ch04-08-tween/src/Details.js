@@ -1,4 +1,4 @@
-export default ({redTelemetry, blueTelemetry}) => {
+const Details = ({redTelemetry, blueTelemetry}) => {
     return <table className='tracking'>
         <thead>
         <tr>
@@ -23,4 +23,6 @@ export default ({redTelemetry, blueTelemetry}) => {
         </tr>
         </tbody>
     </table>;
-}
+};
+
+export default Details;

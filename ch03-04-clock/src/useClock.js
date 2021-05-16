@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import moment from "moment";
 
-export default (formatOrInterval) => {
+const useClock = (formatOrInterval) => {
     const format = (typeof formatOrInterval === 'string')
         ? formatOrInterval : 'YYYY-MM-DDTHH:mm:ss.SSS';
     const interval = (typeof formatOrInterval === 'number')
@@ -19,3 +19,5 @@ export default (formatOrInterval) => {
 
     return response;
 };
+
+export default useClock;

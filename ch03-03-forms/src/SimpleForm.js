@@ -9,7 +9,7 @@ function updateWith(oldValue, field, value) {
     return newValue;
 }
 
-export default ({children, value, onChange, onValid}) => {
+const SimpleForm = ({children, value, onChange, onValid}) => {
     const [values, setValues] = useState(value || {});
     const [dirtyFields, setDirtyFields] = useState({});
     const [invalidFields, setInvalidFields] = useState({});
@@ -57,4 +57,6 @@ export default ({children, value, onChange, onValid}) => {
             {children}
         </FormContext.Provider>
     </div>;
-}
+};
+
+export default SimpleForm;

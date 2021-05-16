@@ -1,7 +1,7 @@
 import {useState} from "react";
 import SecurityContext from "./SecurityContext";
 
-export default (props) => {
+const SecurityProvider = (props) => {
     const [loggedIn, setLoggedIn] = useState(false);
 
     return <SecurityContext.Provider
@@ -19,3 +19,5 @@ export default (props) => {
         {props.children}
     </SecurityContext.Provider>
 };
+
+export default SecurityProvider;

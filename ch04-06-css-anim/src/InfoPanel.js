@@ -2,7 +2,7 @@ import {useState} from 'react';
 
 import './InfoPanel.css';
 
-export default ({title, children}) => {
+const InfoPanel = ({title, children}) => {
     const [open, setOpen] = useState(false);
 
     return <section className='InfoPanel'>
@@ -17,4 +17,6 @@ export default ({title, children}) => {
             {children}
         </div>
     </section>
-}
+};
+
+export default InfoPanel;

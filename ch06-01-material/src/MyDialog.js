@@ -6,7 +6,7 @@ import DialogActions from "@material-ui/core/DialogActions";
 import Button from "@material-ui/core/Button";
 import CloseIcon from '@material-ui/icons/Close';
 
-export const MyDialog = ({onClose, open, title, children}) => {
+const MyDialog = ({onClose, open, title, children}) => {
     return <Dialog
         open={open}
         onClose={onClose}
@@ -28,3 +28,5 @@ export const MyDialog = ({onClose, open, title, children}) => {
         </DialogActions>
     </Dialog>;
 };
+
+export default MyDialog;

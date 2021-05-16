@@ -4,7 +4,7 @@ import ClockFace from "./ClockFace";
 
 import "./Ticker.css";
 
-export default () => {
+const Ticker = () => {
     const [isMinutes, setMinutes] = useState(false);
     const [isTick, setTick] = useState(false);
     const [isTickDate, setTickDate] = useState(false);
@@ -49,3 +49,5 @@ export default () => {
         </div>
     );
 };
+
+export default Ticker;

@@ -24,7 +24,7 @@ const Markers = ({intervals, innerRadius, outerRadius, color, strokeWidth, cente
     });
 }
 
-export default ({time}) => {
+const ClockFace = ({time}) => {
     const hms = time.split(':');
     const h = parseInt(hms[0]);
     const m = parseInt(hms[1]);
@@ -85,6 +85,7 @@ export default ({time}) => {
         {hourArm}
         {minuteArm}
         <circle cx={WIDTH / 2} cy={HEIGHT / 2} r="3.5" stroke="red" fill='#b20000' strokeWidth="2"/>
-    </svg>
-        ;
-}
+    </svg>;
+};
+
+export default ClockFace;

@@ -3,7 +3,7 @@ import './App.css';
 import SimpleForm from "./SimpleForm";
 import InputField from "./InputField";
 
-export default ({onSubmit, onChange, initialValue = {}}) => {
+const FormExample0 = ({onSubmit, onChange, initialValue = {}}) => {
     const [formFields, setFormFields] = useState(initialValue);
 
     const [valid, setValid] = useState(true);
@@ -34,4 +34,6 @@ export default ({onSubmit, onChange, initialValue = {}}) => {
             </button>
         </SimpleForm>
     </div>;
-}
+};
+
+export default FormExample0;

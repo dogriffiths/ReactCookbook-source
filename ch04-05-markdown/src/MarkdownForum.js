@@ -1,7 +1,7 @@
 import {useState} from "react";
 import MDEditor from '@uiw/react-md-editor';
 
-export default () => {
+const MarkdownForum = () => {
     const [text, setText] = useState('');
     const [messages, setMessages] = useState([])
 
@@ -21,4 +21,6 @@ export default () => {
             </dl>;
         })}
     </section>;
-}
+};
+
+export default MarkdownForum;

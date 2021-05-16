@@ -4,7 +4,7 @@ import ClockFace from "./ClockFace";
 
 import "./Ticker.css";
 
-export default () => {
+const SimpleTicker = () => {
     const [isTick, setTick] = useState(false);
 
     const time = useClock("HH:mm:ss");
@@ -24,3 +24,5 @@ export default () => {
         </div>
     );
 };
+
+export default SimpleTicker;

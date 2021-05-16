@@ -2,7 +2,7 @@ import './App.css';
 import {useState} from "react";
 import useCancelableSearch from "./useCancelableSearch";
 
-export default () => {
+const CancelableSearch = () => {
     const [terms, setTerms] = useState();
     const {data: results} = useCancelableSearch(terms);
 
@@ -29,3 +29,5 @@ export default () => {
         </div>
     );
 };
+
+export default CancelableSearch;

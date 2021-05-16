@@ -2,7 +2,7 @@ import ErrorHandlerContext from "./ErrorHandlerContext";
 
 let setError = () => {};
 
-export default (props) => {
+const ErrorHandlerProvider = (props) => {
     if (props.callback) {
         setError = props.callback;
     }
@@ -13,3 +13,5 @@ export default (props) => {
         </ErrorHandlerContext.Provider>
     );
 };
+
+export default ErrorHandlerProvider;

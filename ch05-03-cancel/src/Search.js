@@ -2,7 +2,7 @@ import './App.css';
 import {useState} from "react";
 import useSearch from "./useSearch";
 
-export default () => {
+const Search = () => {
     const [terms, setTerms] = useState();
     const {data: results} = useSearch(terms);
 
@@ -29,3 +29,5 @@ export default () => {
         </div>
     );
 };
+
+export default Search;

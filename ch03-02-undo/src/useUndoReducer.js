@@ -1,4 +1,6 @@
 import {useReducer} from "react";
 import undo from "./undo";
 
-export default (reducer, initialState) => useReducer(undo(reducer), initialState);
+const useUndoReducer = (reducer, initialState) => useReducer(undo(reducer), initialState);
+
+export default useUndoReducer;

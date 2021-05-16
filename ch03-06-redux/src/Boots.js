@@ -11,7 +11,7 @@ const products = [
         description: 'Mondo 27.3. Brown.', price: 634.98},
 ];
 
-export default () => {
+const Boots = () => {
     const dispatch = useDispatch();
 
     return <div className='Boots'>
@@ -34,3 +34,5 @@ export default () => {
         </dl>
     </div>;
 };
+
+export default Boots;

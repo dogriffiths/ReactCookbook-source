@@ -1,7 +1,7 @@
 import {useState} from "react";
 import './Forum.css';
 
-export default () => {
+const Forum = () => {
     const [text, setText] = useState('');
     const [messages, setMessages] = useState([])
 
@@ -21,4 +21,6 @@ export default () => {
             </dl>;
         })}
     </section>;
-}
+};
+
+export default Forum;

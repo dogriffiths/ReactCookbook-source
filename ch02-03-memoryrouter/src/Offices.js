@@ -1,4 +1,4 @@
-export default () => <dl>
+const Offices = () => <dl>
     <dt>South Dakota</dt>
     <dd>18627 Sporer Mews<br/>
         Maximechester<br/>
@@ -12,3 +12,5 @@ export default () => <dl>
         25072
     </dd>
 </dl>;
+
+export default Offices;

@@ -10,7 +10,7 @@
     "graphql": "^15.5.0",
     "ra-data-graphql-simple": "^3.13.2",
     "react": "^17.0.2",
-    "react-admin": "^3.15.0",
+    "react-admin": "^3.15.1",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "require-text": "0.0.1",
@@ -41,6 +41,6 @@
     ]
   },
   "devDependencies": {
-    "cypress": "^7.2.0"
+    "cypress": "^7.3.0"
   }
 }

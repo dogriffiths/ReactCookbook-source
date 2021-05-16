@@ -3,7 +3,7 @@ import useClock from "./useClock";
 
 import "./Ticker.css";
 
-export default () => {
+const IntervalTicker = () => {
     const [isTick3, setTick3] = useState(false);
 
     const tickThreeSeconds = useClock(3000);
@@ -21,3 +21,5 @@ export default () => {
         </div>
     );
 };
+
+export default IntervalTicker;

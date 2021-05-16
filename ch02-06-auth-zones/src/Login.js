@@ -1,7 +1,7 @@
 import {useState} from "react";
 import useSecurity from "./useSecurity";
 
-export default () => {
+const Login = () => {
     const {login} = useSecurity();
     const [username, setUsername] = useState();
     const [password, setPassword] = useState();
@@ -32,3 +32,5 @@ export default () => {
         <button onClick={() => login(username, password)}>Login</button>
     </div>;
 };
+
+export default Login;

@@ -4,7 +4,7 @@ import Person from "./Person";
 import PeopleList from "./PeopleList";
 import people from './people';
 
-export default () => {
+const PeopleContainer = () => {
     return <Media queries={{
         small: "(max-width: 700px)"
     }}>
@@ -29,3 +29,5 @@ export default () => {
         }
     </Media>;
 };
+
+export default PeopleContainer;
