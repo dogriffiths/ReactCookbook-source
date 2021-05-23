@@ -1,0 +1,21 @@
+main {
+    display: flex;
+}
+
+[role="navigation"] {
+    margin-top: 0;
+    padding: 8px;
+    min-height: 100vh;
+    background-color: #ffef64;
+    color: #001389;
+}
+
+[role="navigation"] a {
+    color: #001389;
+    line-height: 200%;
+    font-weight: 400;
+}
+
+a:link {
+    text-decoration: none;
+}

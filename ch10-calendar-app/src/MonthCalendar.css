@@ -1,0 +1,16 @@
+.MonthCalendar {
+    width: 250px;
+    max-width: 250px;
+    height: 250px;
+    max-height: 200px;
+    margin: 16px;
+    display: inline-block;
+    float: left;
+    padding: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.MonthCalendar h2 {
+    display: block;
+    margin-bottom: 4px;
+}

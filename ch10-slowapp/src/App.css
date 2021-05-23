@@ -1,0 +1,12 @@
+.App {
+  margin: 32px;
+}
+
+
+.widget {
+    display: inline-block;
+    margin: 12px;
+    padding: 8px;
+    color: white;
+    background-color: teal;
+}

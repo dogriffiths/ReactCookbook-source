@@ -1,0 +1,4 @@
+.Day {
+    display: inline-block;
+    width: calc(100% / 7);
+}
