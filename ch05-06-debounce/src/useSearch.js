@@ -7,6 +7,7 @@ const useSearch = (terms) => {
     const [error, setError] = useState();
 
     useEffect(() => {
+        let didCancel = false;
         setError(null);
         if (terms) {
             (async () => {
@@ -17,7 +18,9 @@ const useSearch = (terms) => {
                             params: {terms},
                         },
                     );
-                    setData(response.data);
+                    if (!didCancel) {
+                        setData(response.data);
+                    }
                 } catch (err) {
                     setError(err);
                 } finally {
@@ -28,6 +31,7 @@ const useSearch = (terms) => {
             setData([]);
             setLoading(false);
         }
+        return () => {didCancel = true;}
     }, [terms]);
 
     return {data, loading, error};

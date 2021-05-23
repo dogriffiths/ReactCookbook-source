@@ -30,6 +30,7 @@ const useForum = (forum) => {
     }, [forum]);
 
     useEffect(() => {
+        let didCancel = false;
         setError(null);
         if (forum) {
             (async () => {
@@ -43,7 +44,9 @@ const useForum = (forum) => {
                         );
                     }
                     const body = await response.json();
-                    setData(body);
+                    if (!didCancel) {
+                        setData(body);
+                    }
                 } catch (err) {
                     setError(err);
                 } finally {
@@ -54,6 +57,7 @@ const useForum = (forum) => {
             setData([]);
             setLoading(false);
         }
+        return () => {didCancel = true;}
     }, [forum, stateVersion]);
 
     return {data, loading, error, create, creating};
