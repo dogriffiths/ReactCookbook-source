@@ -4,7 +4,9 @@ import useMessages from "./useMessages";
 
 function App() {
     const [forum, setForum] = useState('nasa');
-    const {data: messages, loading: messagesLoading, error: messagesError} = useMessages(forum);
+    const {data: messages,
+           loading: messagesLoading,
+           error: messagesError} = useMessages(forum);
 
     return (
         <div className="App">

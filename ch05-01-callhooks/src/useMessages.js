@@ -6,6 +6,7 @@ const useMessages = (forum) => {
     const [error, setError] = useState();
 
     useEffect(() => {
+        let didCancel = false;
         setError(null);
         if (forum) {
             (async () => {
@@ -19,7 +20,9 @@ const useMessages = (forum) => {
                         );
                     }
                     const body = await response.json();
-                    setData(body);
+                    if (!didCancel) {
+                        setData(body);
+                    }
                 } catch(err) {
                     setError(err);
                 } finally {
@@ -30,6 +33,7 @@ const useMessages = (forum) => {
             setData([]);
             setLoading(false);
         }
+        return () => {didCancel = true;}
     }, [forum]);
 
     return {data, loading, error};
