@@ -1,0 +1,21 @@
+.Modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.Modal-dialog {
+    position: relative;
+    background: #fff;
+    padding: 24px;
+    overflow: hidden;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.4);
+    margin: 0 auto;
+    margin-top: 100px;
+}
+

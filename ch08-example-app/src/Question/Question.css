@@ -1,0 +1,19 @@
+.Question {
+    width: 100%;
+    background-color: teal;
+    color: white;
+}
+
+.Question-detail {
+    display: flex;
+    flex-direction: row;
+    font-size: 172px;
+    align-items: stretch;
+    justify-content: center;
+}
+
+@media screen and (max-width: 600px){
+    .Question-detail {
+        font-size: 42px;
+    }
+}

@@ -1,0 +1,75 @@
+body {
+    padding: 32px;
+}
+
+/*h1 {*/
+/*    color: #767676;*/
+/*}*/
+
+/*h1 {*/
+/*    color: #9e9e9e;*/
+/*}*/
+
+.addButton {
+    border-radius:100%;
+    width: 56px;
+    height: 56px;
+    background-color: rgb(98, 0, 238);
+    border-color: rgb(98, 0, 238);
+    border-style: none;
+    color: white;
+    font-size: 40px;
+    padding: 0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px, rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    transition: all 0.1s ease-in-out;
+}
+
+.addButton:active {
+    box-shadow: none;
+}
+
+.addButton:hover {
+    box-shadow: 0 6px 14px 0 #666;
+    transform: scale(1.05);
+}
+
+@-moz-document url-prefix() {
+    .addButton { padding-bottom:20px; }
+}
+
+:focus-visible {
+    outline: 2px solid blue;
+}
+
+main {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    min-height: calc(100vh - 250px);
+    column-count: 1;
+    column-fill: auto;
+}
+
+@media screen and (min-width: 600px) {
+    main {
+        column-count: 2;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    main {
+        column-count: 3;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+        column-count: 4;
+    }
+}
+
+footer {
+    clear: both;
+}

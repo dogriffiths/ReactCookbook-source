@@ -1,0 +1,36 @@
+.Result {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 60px;
+    background-color: grey;
+    padding: 16px;
+}
+
+.Result button {
+    font-size: 40px;
+    background-color: red;
+}
+
+@-moz-document url-prefix() {
+    .Result {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        font-size: 50px;
+        color: antiquewhite;
+        font-variant: all-petite-caps;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .Result {
+        width: 100%;
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    .Result button {
+        font-size: 20px;
+    }
+}

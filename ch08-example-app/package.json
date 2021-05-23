@@ -1,0 +1,57 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test '.*.test.js'",
+    "testSelenium": "CI=true react-scripts test 'selenium/.*.spec.js'",
+    "testShots": "CI=true react-scripts test --detectOpenHandles 'selenium/shots.spec.js'",
+    "testAll": "CI=true react-scripts test",
+    "eject": "react-scripts eject",
+    "cucumber": "cucumber-js",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^7.0.0",
+    "@storybook/addon-actions": "^6.1.20",
+    "@storybook/addon-essentials": "^6.1.20",
+    "@storybook/addon-links": "^6.1.20",
+    "@storybook/node-logger": "^6.1.20",
+    "@storybook/preset-create-react-app": "^3.1.6",
+    "@storybook/react": "^6.1.20",
+    "chai": "^4.3.0",
+    "chromedriver": "^88.0.0",
+    "selenium-webdriver": "^4.0.0-beta.1",
+    "sinon": "^9.2.4"
+  }
+}

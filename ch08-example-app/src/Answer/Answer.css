@@ -1,0 +1,31 @@
+.Answer {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    background-color: black;
+    color: white;
+}
+
+.Answer label, .Answer input, .Answer button {
+    margin: 10px;
+    font-size: 18pt;
+}
+
+.Answer input {
+    flex-grow: 2;
+}
+
+@media screen and (max-width: 600px){
+    .Answer {
+        flex-direction: column;
+    }
+
+    .Answer label, .Answer input, .Answer button {
+        margin: 10px;
+        font-size: 16pt;
+    }
+
+    .Answer input {
+        flex-grow: 0;
+    }
+}

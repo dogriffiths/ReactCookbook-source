@@ -1,0 +1,11 @@
+.ModalFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.ModalFooter button {
+    margin-left: 16px;
+    padding: 4px;
+    min-width: 64px;
+}
