@@ -1,12 +1,12 @@
 .Person {
     margin: 0;
     padding: 0 0 0 12px;
-    background-color: rgb(16, 14, 23);
+    background-color: rgb(255, 255, 255);
     border-style: solid;
     border-width: 1px;
-    border-color: black;
+    border-color: #ffffff;
     width: 100%;
-    color: white;
+    color: #000000;
     min-height: 100vh;
 }
 

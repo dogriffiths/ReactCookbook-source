@@ -8,6 +8,7 @@
 }
 
 .PeopleList a {
+    background-color: #f5f5f5;
     border-bottom-color: #c0c0c0;
     border-bottom-style: solid;
     border-bottom-width: 1px;
@@ -17,7 +18,7 @@
 }
 
 .PeopleList .currentPerson {
-    background-color: rgb(16, 14, 23);
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
     font-weight: bold;
 }
