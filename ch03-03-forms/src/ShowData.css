@@ -1,6 +1,6 @@
 .ShowData {
-    color: white;
-    background-color: black;
+    color: #000000;
+    background-color: #f1f1f1;
     padding: 32px;
     width: 50vw;
     max-width: 50vw;
@@ -10,7 +10,7 @@
 .ShowData dd {
     white-space: pre;
     font-family: monospace;
-    color: #00ff00;
+    color: black;
     font-size: 140%;
     font-weight: 500;
 }
