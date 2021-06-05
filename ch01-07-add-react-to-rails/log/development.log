@@ -1,5 +1,5 @@
-Started GET "/example/index.html" for 127.0.0.1 at 2021-06-05 13:07:38 +0100
-  [1m[35m (4.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/example/index.html" for 127.0.0.1 at 2021-06-05 15:52:59 +0100
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
 Processing by ExampleController#index as HTML
   Rendering example/index.html.erb within layouts/application
 [Webpacker] Compiling...
@@ -97,20 +97,20 @@ The "loose" option must be the same for @babel/plugin-proposal-class-properties,
 	["@babel/plugin-proposal-private-methods", { "loose": true }]
 to the "plugins" section of your Babel config.
 
-[Webpacker] Hash: 42b98da23139a1f4030c
+[Webpacker] Hash: 4f55df3c2d12c8fdc523
 Version: webpack 4.46.0
-Time: 19162ms
-Built at: 06/05/2021 13:08:04
+Time: 11695ms
+Built at: 06/05/2021 15:53:16
                                      Asset        Size       Chunks                         Chunk Names
     js/application-e88c6c3304a15e6886b6.js     124 KiB  application  [emitted] [immutable]  application
 js/application-e88c6c3304a15e6886b6.js.map     139 KiB  application  [emitted] [dev]        application
-        js/counter-704a0cb38cc4beafb339.js    1.06 MiB      counter  [emitted] [immutable]  counter
-    js/counter-704a0cb38cc4beafb339.js.map    1.22 MiB      counter  [emitted] [dev]        counter
+        js/counter-195e5e5c78778a1ea79a.js    1.06 MiB      counter  [emitted] [immutable]  counter
+    js/counter-195e5e5c78778a1ea79a.js.map    1.22 MiB      counter  [emitted] [dev]        counter
     js/hello_react-4a70a923b4afa3cc6e8a.js    1.09 MiB  hello_react  [emitted] [immutable]  hello_react
 js/hello_react-4a70a923b4afa3cc6e8a.js.map    1.26 MiB  hello_react  [emitted] [dev]        hello_react
                              manifest.json  1010 bytes               [emitted]              
 Entrypoint application = js/application-e88c6c3304a15e6886b6.js js/application-e88c6c3304a15e6886b6.js.map
-Entrypoint counter = js/counter-704a0cb38cc4beafb339.js js/counter-704a0cb38cc4beafb339.js.map
+Entrypoint counter = js/counter-195e5e5c78778a1ea79a.js js/counter-195e5e5c78778a1ea79a.js.map
 Entrypoint hello_react = js/hello_react-4a70a923b4afa3cc6e8a.js js/hello_react-4a70a923b4afa3cc6e8a.js.map
 [./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
 [./app/javascript/channels/index.js] 211 bytes {application} [built]
@@ -120,8 +120,8 @@ Entrypoint hello_react = js/hello_react-4a70a923b4afa3cc6e8a.js js/hello_react-4
 [./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
     + 18 hidden modules
 
-  Rendered example/index.html.erb within layouts/application (Duration: 25478.7ms | Allocations: 3849)
+  Rendered example/index.html.erb within layouts/application (Duration: 16303.3ms | Allocations: 3827)
 [Webpacker] Everything's up-to-date. Nothing to do
-Completed 200 OK in 25712ms (Views: 25622.6ms | ActiveRecord: 0.0ms | Allocations: 23250)
+Completed 200 OK in 16447ms (Views: 16412.5ms | ActiveRecord: 0.0ms | Allocations: 23231)
 
 

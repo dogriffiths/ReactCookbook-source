@@ -128,8 +128,8 @@ var Counter = function Counter(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6,
-      columnNumber: 10
+      lineNumber: 7,
+      columnNumber: 5
     }
   }, "You have clicked the button ", count, " times.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: function onClick() {
@@ -140,8 +140,8 @@ var Counter = function Counter(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8,
-      columnNumber: 5
+      lineNumber: 9,
+      columnNumber: 7
     }
   }, "Click!"));
 };
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function () {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14,
+      lineNumber: 16,
       columnNumber: 5
     }
   }), document.body.appendChild(document.createElement('div')));
@@ -29697,4 +29697,4 @@ if (false) {} else {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=counter-704a0cb38cc4beafb339.js.map
+//# sourceMappingURL=counter-195e5e5c78778a1ea79a.js.map
