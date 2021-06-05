@@ -1,15 +1,15 @@
-import './App.css';
-import ErrorContainer from "./ErrorContainer";
-import ClockIn from "./ClockIn";
+import './App.css'
+import ErrorContainer from './ErrorContainer'
+import ClockIn from './ClockIn'
 
 function App() {
   return (
     <div className="App">
       <ErrorContainer>
-        <ClockIn/>
+        <ClockIn />
       </ErrorContainer>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

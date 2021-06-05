@@ -1,17 +1,17 @@
-import ErrorHandlerContext from "./ErrorHandlerContext";
+import ErrorHandlerContext from './ErrorHandlerContext'
 
-let setError = () => {};
+let setError = () => {}
 
 const ErrorHandlerProvider = (props) => {
-    if (props.callback) {
-        setError = props.callback;
-    }
+  if (props.callback) {
+    setError = props.callback
+  }
 
-    return (
-        <ErrorHandlerContext.Provider value={setError}>
-            {props.children}
-        </ErrorHandlerContext.Provider>
-    );
-};
+  return (
+    <ErrorHandlerContext.Provider value={setError}>
+      {props.children}
+    </ErrorHandlerContext.Provider>
+  )
+}
 
-export default ErrorHandlerProvider;
+export default ErrorHandlerProvider

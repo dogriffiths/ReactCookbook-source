@@ -15,7 +15,7 @@
   },
   "version": "0.1.0",
   "devDependencies": {
-    "cypress": "^7.3.0",
+    "cypress": "^7.4.0",
     "webpack-dev-server": "^3.11.2"
   }
 }

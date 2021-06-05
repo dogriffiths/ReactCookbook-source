@@ -1,27 +1,31 @@
-import {MemoryRouter} from "react-router";
-import {Route, BrowserRouter} from "react-router-dom";
-import About from './About';
+import { MemoryRouter } from 'react-router'
+import { Route, BrowserRouter } from 'react-router-dom'
+import About from './About'
 
 export default {
-    title: 'About',
-};
+  title: 'About',
+}
 
-export const Basic = () => <About/>;
+export const Basic = () => <About />
 
-export const WithBrowserRouter = () => <BrowserRouter><About/></BrowserRouter>;
+export const WithBrowserRouter = () => (
+  <BrowserRouter>
+    <About />
+  </BrowserRouter>
+)
 
-export const ToAbout = () => <MemoryRouter initialEntries={[
-    {pathname: '/about'},
-]}>
-    <Route path='/about/:tabId?'>
-        <About/>
+export const ToAbout = () => (
+  <MemoryRouter initialEntries={[{ pathname: '/about' }]}>
+    <Route path="/about/:tabId?">
+      <About />
     </Route>
-</MemoryRouter>;
+  </MemoryRouter>
+)
 
-export const ToAboutOffices = () => <MemoryRouter initialEntries={[
-    {pathname: '/about/offices'},
-]}>
-    <Route path='/about/:tabId?'>
-        <About/>
+export const ToAboutOffices = () => (
+  <MemoryRouter initialEntries={[{ pathname: '/about/offices' }]}>
+    <Route path="/about/:tabId?">
+      <About />
     </Route>
-</MemoryRouter>;
+  </MemoryRouter>
+)

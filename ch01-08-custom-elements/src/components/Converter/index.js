@@ -1,5 +1,5 @@
 import {h} from 'preact';
-import {useEffect, useState} from "preact/hooks";
+import {useEffect, useState} from 'preact/hooks';
 import 'style/index.css';
 
 const rates = {gbp: 0.81, eur: 0.92, jpy: 106.64};

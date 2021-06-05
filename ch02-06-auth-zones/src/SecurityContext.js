@@ -1,5 +1,5 @@
-import React from "react";
+import React from 'react'
 
-const SecurityContext = React.createContext({});
+const SecurityContext = React.createContext({})
 
-export default SecurityContext;
+export default SecurityContext

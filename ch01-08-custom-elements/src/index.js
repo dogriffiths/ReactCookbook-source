@@ -1,4 +1,4 @@
-import register from 'preact-custom-element';
-import Converter from './components/Converter';
+import register from 'preact-custom-element'
+import Converter from './components/Converter'
 
-register(Converter, 'x-converter', ['currency']);
+register(Converter, 'x-converter', ['currency'])

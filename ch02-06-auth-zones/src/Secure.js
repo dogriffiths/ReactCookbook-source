@@ -1,10 +1,10 @@
-import Login from "./Login";
-import useSecurity from "./useSecurity";
+import Login from './Login'
+import useSecurity from './useSecurity'
 
-const Secure = ({children}) => {
-    const {loggedIn} = useSecurity();
+const Secure = ({ children }) => {
+  const { loggedIn } = useSecurity()
 
-    return loggedIn ? children : <Login/>;
-};
+  return loggedIn ? children : <Login />
+}
 
-export default Secure;
+export default Secure

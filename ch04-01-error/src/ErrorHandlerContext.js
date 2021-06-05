@@ -1,7 +1,5 @@
-import React from "react";
+import React from 'react'
 
-const ErrorHandlerContext = React.createContext(
-    () => {}
-);
+const ErrorHandlerContext = React.createContext(() => {})
 
-export default ErrorHandlerContext;
+export default ErrorHandlerContext

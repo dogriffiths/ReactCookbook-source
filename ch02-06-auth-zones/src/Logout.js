@@ -1,9 +1,9 @@
-import useSecurity from "./useSecurity";
+import useSecurity from './useSecurity'
 
 const Logout = () => {
-    const {logout} = useSecurity();
+  const { logout } = useSecurity()
 
-    return <button onClick={logout}>Logout</button>;
-};
+  return <button onClick={logout}>Logout</button>
+}
 
-export default Logout;
+export default Logout

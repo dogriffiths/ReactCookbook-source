@@ -1,8 +1,8 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from '@testing-library/react'
+import App from './App'
 
 test('renders learn react link', () => {
-  render(<App />);
-  const arrow = screen.getByTitle('arrow');
-  expect(arrow).toBeInTheDocument();
-});
+  render(<App />)
+  const arrow = screen.getByTitle('arrow')
+  expect(arrow).toBeInTheDocument()
+})

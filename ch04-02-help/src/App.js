@@ -1,10 +1,10 @@
-import {useState} from 'react';
-import logo from './logo.svg';
-import HelpSequence from "./HelpSequence";
-import './App.css';
+import { useState } from 'react'
+import logo from './logo.svg'
+import HelpSequence from './HelpSequence'
+import './App.css'
 
 function App() {
-  const [showHelp, setShowHelp] = useState(false);
+  const [showHelp, setShowHelp] = useState(false)
 
   return (
     <div className="App">
@@ -25,15 +25,24 @@ function App() {
       <button onClick={() => setShowHelp(true)}>Show help</button>
       <HelpSequence
         sequence={[
-          {forElement: "p", text: "This is some introductory text telling you how to start"},
-          {forElement: ".App-link", text: "This will show you how to use React"},
-          {forElement: ".App-nowhere", text: "This help text will never appear"},
+          {
+            forElement: 'p',
+            text: 'This is some introductory text telling you how to start',
+          },
+          {
+            forElement: '.App-link',
+            text: 'This will show you how to use React',
+          },
+          {
+            forElement: '.App-nowhere',
+            text: 'This help text will never appear',
+          },
         ]}
         open={showHelp}
         onClose={() => setShowHelp(false)}
       />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
