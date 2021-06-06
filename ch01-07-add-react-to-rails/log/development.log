@@ -1,5 +1,5 @@
-Started GET "/example/index.html" for 127.0.0.1 at 2021-06-05 15:52:59 +0100
-  [1m[35m (3.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/example/index.html" for 127.0.0.1 at 2021-06-06 11:29:00 +0100
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
 Processing by ExampleController#index as HTML
   Rendering example/index.html.erb within layouts/application
 [Webpacker] Compiling...
@@ -99,8 +99,8 @@ to the "plugins" section of your Babel config.
 
 [Webpacker] Hash: 4f55df3c2d12c8fdc523
 Version: webpack 4.46.0
-Time: 11695ms
-Built at: 06/05/2021 15:53:16
+Time: 10870ms
+Built at: 06/06/2021 11:29:16
                                      Asset        Size       Chunks                         Chunk Names
     js/application-e88c6c3304a15e6886b6.js     124 KiB  application  [emitted] [immutable]  application
 js/application-e88c6c3304a15e6886b6.js.map     139 KiB  application  [emitted] [dev]        application
@@ -120,8 +120,8 @@ Entrypoint hello_react = js/hello_react-4a70a923b4afa3cc6e8a.js js/hello_react-4
 [./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
     + 18 hidden modules
 
-  Rendered example/index.html.erb within layouts/application (Duration: 16303.3ms | Allocations: 3827)
+  Rendered example/index.html.erb within layouts/application (Duration: 15332.5ms | Allocations: 3826)
 [Webpacker] Everything's up-to-date. Nothing to do
-Completed 200 OK in 16447ms (Views: 16412.5ms | ActiveRecord: 0.0ms | Allocations: 23231)
+Completed 200 OK in 15528ms (Views: 15485.9ms | ActiveRecord: 0.0ms | Allocations: 23424)
 
 
