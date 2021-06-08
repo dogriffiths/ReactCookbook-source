@@ -1,13 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
-
-import './SimpleForm.css'
 import FormContext from './FormContext'
-
-function updateWith(oldValue, field, value) {
-  const newValue = { ...oldValue }
-  newValue[field] = value
-  return newValue
-}
+import './SimpleForm.css'
 
 const SimpleForm = ({ children, value, onChange, onValid }) => {
   const [values, setValues] = useState(value || {})
@@ -33,28 +26,29 @@ const SimpleForm = ({ children, value, onChange, onValid }) => {
     }
   }, [onValid, invalidFields])
 
-  let setValue = useCallback(
-    (field, v) => setValues((vs) => updateWith(vs, field, v)),
+  const setValue = useCallback(
+    (field, v) => setValues((vs) => ({ ...vs, [field]: v })),
     [setValues]
   )
-  let getValue = useCallback((field) => values[field], [values])
-  let setDirty = useCallback(
-    (field) => setDirtyFields((df) => updateWith(df, field, true)),
+  const getValue = useCallback((field) => values[field], [values])
+  const setDirty = useCallback(
+    (field) => setDirtyFields((df) => ({ ...df, [field]: true })),
     [setDirtyFields]
   )
-  let getDirty = useCallback(
+  const getDirty = useCallback(
     (field) => Object.keys(dirtyFields).includes(field),
     [dirtyFields]
   )
-  let setInvalid = useCallback(
+  const setInvalid = useCallback(
     (field, error) => {
-      setInvalidFields((i) =>
-        updateWith(i, field, error ? error : undefined)
-      )
+      setInvalidFields((i) => ({
+        ...i,
+        [field]: error ? error : undefined,
+      }))
     },
     [setInvalidFields]
   )
-  let form = {
+  const form = {
     setValue: setValue,
     value: getValue,
 
