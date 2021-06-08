@@ -1,9 +1,11 @@
-import {createSelector} from "reselect";
+import { createSelector } from 'reselect'
 
-export default createSelector(
-    state => (state.basket || []),
-    basket => ({
-            itemCount: basket.reduce((i, j) => i + j.quantity, 0),
-            cost: basket.reduce((i, j) => i + (j.quantity * j.price), 0),
-        })
-);
+const summarizer = createSelector(
+  (state) => state.basket || [],
+  (basket) => ({
+    itemCount: basket.reduce((i, j) => i + j.quantity, 0),
+    cost: basket.reduce((i, j) => i + j.quantity * j.price, 0),
+  })
+)
+
+export default summarizer

@@ -1,7 +1,9 @@
-import {createSelector} from "reselect";
-import summarizer from "./summarizer";
+import { createSelector } from 'reselect'
+import summarizer from './summarizer'
 
-export default createSelector(
-    summarizer,
-        summary => (summary.cost * 0.25)
-);
+const taxer = createSelector(
+  summarizer,
+  (summary) => summary.cost * 0.07
+)
+
+export default taxer
