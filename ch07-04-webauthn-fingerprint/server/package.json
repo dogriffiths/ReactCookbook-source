@@ -1,0 +1,21 @@
+{
+    "name": "server",
+    "version": "1.0.0",
+    "description": "Simple Webauthn Server",
+    "type": "module",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "node src/index.js",
+        "test": "jest --coverage '.*\\.test\\.[tj]s$'"
+    },
+    "devDependencies": {
+        "@types/jest": "^26.0.14",
+        "jest": "^26.4.2"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@simplewebauthn/server": "^0.10.6",
+        "cookie-parser": "^1.4.5"
+    }
+}
