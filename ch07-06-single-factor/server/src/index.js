@@ -49,6 +49,7 @@ app.post('/login', (request, response) => {
   sessions[newSession] = { user }
   return response
     .status(200)
+    .cookie('userID', user.id)
     .cookie('__session', newSession)
     .send({ userID: user.id, message: 'Logged in' })
 })
@@ -190,9 +191,9 @@ app.post('/startVerify', (request, response) => {
       type: 'public-key',
     })),
     attestation: 'direct',
-    extensions: {
-      credProps: true,
-    },
+    // extensions: {
+    //   credProps: true,
+    // },
     rpID,
   })
 
