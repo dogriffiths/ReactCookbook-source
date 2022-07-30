@@ -189,9 +189,9 @@ app.post('/startVerify', (request, response) => {
       type: 'public-key',
     })),
     attestation: 'direct',
-    extensions: {
-      credProps: true,
-    },
+//    extensions: {
+//      credProps: true,
+//    },
     rpID,
   })
 
