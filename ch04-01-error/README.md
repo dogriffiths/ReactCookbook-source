@@ -1,5 +1,9 @@
 # Centralized Error Handler
 
+- The centralized error handler is just one of the 87 recipes that can be found in O'Reilly Media's React Cookbook
+
+[![The React Cookbook](https://github.com/dogriffiths/ReactCookbook-source/cover.jpg)](https://www.amazon.com/React-Cookbook-Recipes-Mastering-Framework/dp/1492085847/)
+
 [![Watch the video](https://img.youtube.com/vi/l85dxwaNSWs/maxresdefault.jpg)](https://youtu.be/l85dxwaNSWs)
 
 - Let's say you want to create a standard error dialog that can be used to display errors from anywhere in your React application
@@ -39,5 +43,3 @@
 - And if we ever call the callback function it will make the error dialog appear
 - You can use contexts for other cross-cutting concerns like security or theme-management
 - They can make your application more powerful, without having to write a lot of extra code
-- The centralized error handler is just one of the 87 recipes that can be found in O'Reilly Media's React Cookbook
-- You can find the complete source and further details about the book in the description
