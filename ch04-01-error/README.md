@@ -4,10 +4,7 @@
 
 [![The React Cookbook](https://github.com/dogriffiths/ReactCookbook-source/raw/master/cover.jpg)](https://www.amazon.com/React-Cookbook-Recipes-Mastering-Framework/dp/1492085847/)
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/l85dxwaNSWs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-[![Watch the video](https://img.youtube.com/vi/l85dxwaNSWs/maxresdefault.jpg)](https://youtu.be/l85dxwaNSWs)
+[![Watch the video](./video.png)](https://youtu.be/l85dxwaNSWs)
 
 - Let's say you want to create a standard error dialog that can be used to display errors from anywhere in your React application
 - Now you could create a callback function to display the error
