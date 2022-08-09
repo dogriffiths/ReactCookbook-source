@@ -2,18 +2,20 @@
 
 - The centralized error handler is just one of the 87 recipes that can be found in O'Reilly Media's React Cookbook
 
-[![The React Cookbook](https://github.com/dogriffiths/ReactCookbook-source/cover.jpg)](https://www.amazon.com/React-Cookbook-Recipes-Mastering-Framework/dp/1492085847/)
+[![The React Cookbook](https://github.com/dogriffiths/ReactCookbook-source/raw/master/cover.jpg)](https://www.amazon.com/React-Cookbook-Recipes-Mastering-Framework/dp/1492085847/)
 
 [![Watch the video](https://img.youtube.com/vi/l85dxwaNSWs/maxresdefault.jpg)](https://youtu.be/l85dxwaNSWs)
 
 - Let's say you want to create a standard error dialog that can be used to display errors from anywhere in your React application
 - Now you could create a callback function to display the error
 
+````
     try {
       doSomeStuff()
     } catch (err) {
       setVisibleError('Whoopsie! That went wrong', err)
     }
+````
 
 - And then pass that function to each of the app's components, which pass it to all their child components, and their child components, and their child components
 - But that's a lot of passing around
